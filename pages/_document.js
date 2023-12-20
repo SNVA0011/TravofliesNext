@@ -7,7 +7,7 @@ class MyDocument extends Document {
       <Html lang="en-US">
         <Head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <link rel="icon" href={`${siteurl}/favicon.ico`} type="image/ico" />  
+          <link rel="icon" href={`/favicon.ico`} type="image/ico" />  
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet" />

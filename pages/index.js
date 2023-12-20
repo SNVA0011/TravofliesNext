@@ -1,12 +1,12 @@
  
-import Enginebox from '../component/Enginebox'
-import BlogTile from '../component/BlogTile';
+import Enginebox from '../component/Enginebox' 
 import Link from "next/link"
 import PageHead from '../component/PageHead';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { siteid } from '../utils/static';
+import BlogTile from '../component/BlogCard/BlogTile';
 
 export default function Home(props) {
   return (

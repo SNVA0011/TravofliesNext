@@ -1,0 +1,28 @@
+.spaceTopbottom{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}  
+.bgYellow{
+    background-color: #F9F4F0;
+    background-image: url('/images/bg-yellowwave.png');
+    background-repeat: no-repeat;
+    background-position: left top 9px;
+}
+@media only screen and (max-width:991px) {
+    .spaceTopbottom{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    } 
+}
+@media only screen and (max-width:767px) {
+    .spaceTopbottom{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    } 
+}
+@media only screen and (max-width:575px) {
+    .spaceTopbottom{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    } 
+}

@@ -8,16 +8,17 @@ html {
 body {
   color: #000;
   font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif;
   word-break: break-word;
-  font-display: swap;
+  font-display: swap; 
+  background: #fbfbfb; 
 }
 
-body { scrollbar-face-color: #c1c7d0; scrollbar-track-color: #ffffff }
+body { scrollbar-face-color: #c1c7d0; scrollbar-track-color:  #ffffff }
 ::-webkit-scrollbar { width: 12px; height: 10px }
-::-webkit-scrollbar-thumb { background: #c1c7d0; border-radius: 80px; border: solid 3px #ffffff; min-height: 150px; cursor: pointer; }
+::-webkit-scrollbar-thumb { background: #c1c7d0; border-radius: 80px; border: solid 3px  #ffffff; min-height: 150px; cursor: pointer; }
 ::-webkit-scrollbar-thumb:hover { background: #b2bac5 }
-::-webkit-scrollbar-track { background-color: #ffffff }
+::-webkit-scrollbar-track { background-color:  #ffffff }
 
 
 .btn, .btn:focus, a, a:focus, button, button:focus, input, input:focus, select, select:focus, textarea, textarea:focus {
@@ -44,11 +45,11 @@ ul {
 }
 
 .btn, a, button {
-  transition: all .3s;
-  -webkit-transition: all .3s;
-  -ms-transition: all .3s;
-  -moz-transition: all .3s;
-  -o-transition: all .3s
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s
 }
 
 body, html {
@@ -61,28 +62,24 @@ img {
   height: auto
 }
 
-.full-w {
-  width: 100%;
-  float: left
+.mt-58{
+  margin-top: 58px;
+}
+.mt-35{
+  margin-top: 35px;
 }
 
-*, img {
-  image-rendering: crisp-edges;
-  image-rendering: -o-crisp-edges;
+ 
+
+*, img { 
   image-rendering: -webkit-optimize-contrast
 }
 
-@media(min-width:1200px) {
+@media(min-width:1260px) {
   .container {
-      max-width: 1170px
+      max-width: 1229px
   }
-}
-
-@media(min-width:1900px) {
-  .container {
-      max-width: 1470px
-  }
-}
+} 
 
 @media(max-width:991px) {
   ::-webkit-scrollbar {

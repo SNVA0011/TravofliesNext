@@ -1,0 +1,22 @@
+.PageError{
+    background-image: url('/images/train-error.jpg');
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 437px;
+    text-align: center;
+    padding: 30px 0;
+    font-style: normal;
+    line-height: normal;
+    color: #ffffff;
+}
+
+
+
+.fontweBold {
+    font-weight: 500;
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import Link from "next/link"
-import PageHead from './PageHead'
+import PageHead from '../PageHead'
+import styles from "./common.module.css"
+import LinkButtonSite from '../ButtonSite/LinkButtonSite'
 
 export default function Pageerror({ metatitle, title, link, linktext }) {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+  
     return (
-        <>
+        <div className={styles.PageError}>
             <PageHead
                 title={metatitle}
                 description=""
@@ -18,13 +18,16 @@ export default function Pageerror({ metatitle, title, link, linktext }) {
                 <div className="container py-5">
                     <div className="row justify-content-center">
                         <div className="col-md-12 text-center">
-                            <span className="display-1 d-block">404</span>
-                            <div className="mb-5 mt-2 lead">{title}</div>
-                            <Link href={link}><a className="btn btn-site ripple-effbtn btn-40"><span>{linktext}</span></a></Link>
+                            <span className="display-1 d-block font-weight-bold">404</span>
+                            <div className={`mb-5 mt-2 lead font-weight-semibold ${styles.fontweBold}`}>{title}</div>
+                            <LinkButtonSite path={link}>
+                                {linktext}
+                            </LinkButtonSite>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

@@ -1,7 +1,6 @@
-import Header from './Header'
-import Footer from './Footer'
-import { HeaderUrls } from '../static/HeaderUrls'
-import { FooterUrls } from '../static/FooterUrls'
+ 
+import Footer from './FooterBlock/Footer'
+import Header from './HeaderBlock/Header'
 
 export default function Layout({ children}) { 
     return (

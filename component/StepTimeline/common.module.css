@@ -1,0 +1,216 @@
+.FlexGrow {
+    padding-left: 35px;
+    padding-top: 5px;
+}
+
+.FlexListRow {
+    padding-bottom: 38px;
+    position: relative;
+    letter-spacing: 0.3px;
+}
+
+.FlexListRow::before {
+    content: '';
+    border-left: dashed 2px #e7e7e7;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.FlexListRow:last-child::before {
+    display: none;
+}
+
+.FlexListRow,
+.StepTitle {
+    font-size: 18px;
+    font-style: normal;
+}
+
+.FlexListRow:last-child {
+    padding-bottom: 0;
+}
+
+.FlexListRow a {
+    color: #838282;
+    font-weight: 500;
+}
+
+.FlexListRow a:hover {
+    color: #18978f;
+}
+
+.StepTitle {
+    color: #363535;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.iconRound {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    color: #18978F;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+.iconRound img {
+    width: 30px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s
+}
+
+.FlexListRow:hover .iconRound {
+    background: #DCF4F5;
+    box-shadow: none;
+}
+
+.FlexListRow:hover .iconRound img {
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 18%);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+
+.StepTextOne,
+.StepTextTwo {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.85; 
+    text-align: justify;
+}
+
+.StepTextOne {
+    color: #363535;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.StepTextTwo {
+    color: #838282;
+    font-size: 14px; 
+}
+
+/* responsive */
+@media only screen and (max-width:1499px) {
+    .FlexGrow {
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (max-width:1299px) {
+    .FlexGrow {
+        padding-left: 25px;
+    }
+}
+
+
+@media only screen and (max-width:1199px) {
+    .FlexGrow {
+        padding-top: 6px;
+    }
+
+    .FlexListRow,
+    .StepTitle {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .FlexGrow {
+        padding-left: 20px;
+        padding-top: 8px;
+    } 
+    .FlexListRow::before{
+        left: 27px;
+    }
+    .iconRound {
+        width: 55px;
+        min-width: 55px;
+        height: 55px;
+        font-size: 24px;
+    } 
+    .iconRound img {
+        width: 24px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .FlexGrow {
+        padding-left: 17px;
+        padding-top: 7px;
+    }
+    .iconRound {
+        width: 50px;
+        min-width: 50px;
+        height: 50px;
+        font-size: 22px;
+    } 
+    .iconRound img {
+        width: 22px;
+    }
+    
+    .FlexListRow,
+    .StepTitle {
+        font-size: 16px;
+    }
+    .FlexListRow::before{
+        left: 23px;
+    }
+    .FlexListRow{
+        padding-bottom: 34px;
+    }
+    .StepTextOne, .StepTextTwo{
+    line-height: 1.6;
+}
+}
+
+@media only screen and (max-width:575px) {
+    .StepTextOne{
+        font-size: 14px;
+    }
+    .StepTitle{
+        margin-bottom: 6px;
+    }
+.StepTextTwo{
+    font-size: 13px;
+}
+.FlexListRow{
+    padding-bottom: 30px;
+}
+.FlexGrow {
+    padding-left: 15px;
+    padding-top: 6px;
+}
+.FlexListRow::before{
+    left: 21px;
+}
+.iconRound {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    font-size: 20px;
+} 
+.iconRound img {
+    width: 20px;
+}
+}
+
+@media only screen and (max-width:425px) {}

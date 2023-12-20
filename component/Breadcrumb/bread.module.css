@@ -1,0 +1,114 @@
+.breadcrumbSite {
+    background-image: url('/images/beach-background.png');
+    background-color: #000000;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 437px;
+    text-align: center;
+    padding: 30px 0;
+    font-style: normal;
+    line-height: normal;
+}
+
+.breadcrumbSite.airplane {
+    background-image: url('/images/flight-window.png');
+    background-color: #000000;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.breadcrumbSite,
+.breadcrumbSite a {
+    color: #ffffff;
+}
+.breadcrumbSite a:hover {
+    color: #feb139;
+}
+
+.breadcrumbSite h1, .breadcrumbSite .heading {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.breadcrumbSite ul {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.breadcrumbSite ul img {
+    width: 8px;
+}
+
+.breadcrumbSite ul li {
+    display: inline-block;
+}
+
+.breadcrumbSite .mxSpace {
+    margin: 0 14px;
+}
+
+@media only screen and (max-width:1199px) {
+    .breadcrumbSite h1, .breadcrumbSite .heading {
+        font-size: 36px;
+    }
+
+    .breadcrumbSite ul {
+        font-size: 18px;
+    }
+
+    .breadcrumbSite {
+        min-height: 400px;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .breadcrumbSite h1, .breadcrumbSite .heading {
+        font-size: 32px;
+    }
+
+    .breadcrumbSite ul {
+        font-size: 16px;
+    }
+
+    .breadcrumbSite {
+        min-height: 350px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .breadcrumbSite h1, .breadcrumbSite .heading {
+        font-size: 28px;
+    }
+
+    .breadcrumbSite ul {
+        font-size: 14px;
+    } 
+
+    .breadcrumbSite .mxSpace {
+        margin: 0 12px;
+    }
+
+    .breadcrumbSite ul img {
+        width: 6px;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .breadcrumbSite h1, .breadcrumbSite .heading {
+        font-size: 24px;
+    } 
+
+    .breadcrumbSite .mxSpace {
+        margin: 0 10px;
+    }
+}
+ 
+@media only screen and (max-width:425px) {
+    .breadcrumbSite h1, .breadcrumbSite .heading {
+        font-size: 22px;
+    }
+}

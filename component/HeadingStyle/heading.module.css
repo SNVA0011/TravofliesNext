@@ -1,0 +1,50 @@
+h4.sectionbxTitle{
+    color: #000; 
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+}
+ 
+.sectionbxTitle img{
+    position: absolute;
+    margin-left: 35px;
+    top: 100%;
+    margin-top: 6px;
+}
+
+
+
+@media only screen and (max-width:1199px) {
+    h4.sectionbxTitle{
+        font-size: 28px;
+    }
+    .sectionbxTitle img{
+           width: 150px;
+           margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    h4.sectionbxTitle{
+        font-size: 24px;
+    }
+    .sectionbxTitle img{
+           width: 130px;
+           margin-left: 25px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    h4.sectionbxTitle{
+        font-size: 22px;
+    }
+    .sectionbxTitle img{
+           width: 100px;
+           margin-left: 20px;
+    }
+} 
