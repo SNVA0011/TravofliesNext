@@ -133,6 +133,7 @@ img {
   justify-content: center;  
 }
 
+
 .RecentBlogSlide .swiper-button-prev::after,
 .RecentBlogSlide .swiper-button-next::after {
   font-size: 14px;
@@ -159,7 +160,12 @@ img {
       max-width: 1229px
   }
 } 
-
+@media(min-width:992px) {
+.RecentBlogSlide .swiper-button-prev.swiper-button-disabled,
+.RecentBlogSlide .swiper-button-next.swiper-button-disabled{
+  visibility: hidden;
+}
+}
 @media(max-width:991px) {
   ::-webkit-scrollbar {
       width: 2px;

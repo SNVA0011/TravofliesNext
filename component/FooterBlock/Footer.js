@@ -94,7 +94,7 @@ export default function Footer() {
                             Footer?.ConnectWithUs?.LinksUrl.map((item, index) => {
                               return (
                                 <li key={index}>
-                                  <Link href={item.url}><a className="d-flex" target="_blank"><span><img src={`/images/${item.icon}`} alt={item.title} /></span> {item.title} </a></Link>
+                                  <Link href={item.url}><a className="d-flex" target="_blank"><span><img src={`/images/${item.icon}`} alt={item.icon?.replaceAll('.png','')} /></span> {item.title} </a></Link>
                                 </li>
                               )
                             })

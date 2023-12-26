@@ -5,8 +5,7 @@ import styles from './common.module.css'
 const ContactUsForm = () => {
     return (
         <div className={styles.ContactUsForm}>
-            <h5><img src='/images/mail-send-fill.png' /> Send Message</h5>
-            <p>Lorem ipsum dolor sit amet consectetur. Id purus id purus tempus nibh gravida mollis.</p>
+            <h5><img src='/images/mail-send-fill.png' /> Send Message</h5> 
 
             <div className={`form-group ${styles.FrmGroup}`}>
                 <input type="text" className={`form-control ${styles.FormControl}`} placeholder='Your Name' />

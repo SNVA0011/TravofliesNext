@@ -23,19 +23,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 0;
+    margin-bottom: 27px;
 }
-
-.ContactUsForm p {
-    color: #363535;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.6;
-    margin-top: 18px;
-    margin-bottom: 38px;
-}
-
+ 
 .ContactUsForm .FormControl {
     height: 50px;
     border-radius: 4px;
@@ -112,6 +102,7 @@
 }
 .ContactUsForm h5{
     font-size: 22px;
+    margin-bottom: 24px;
 }
 
 .ContactUsForm h5 img{width: 32px;}
@@ -123,17 +114,14 @@
 }
 .ContactUsForm h5{
     font-size: 20px;
+    margin-bottom: 20px;
 }
-.ContactUsForm h5 img{width: 30px;}
+.ContactUsForm h5 img{width: 30px; }
 .ContactUsForm {
     margin-right: 0;
     margin-left: 0;
     max-width: none;
-}
-.ContactUsForm p {
-    margin-top: 14px;
-    margin-bottom: 34px;
-}
+} 
 }
 
 @media only screen and (max-width:767px) {
@@ -143,12 +131,7 @@
     .ContactUsForm h5 img{width: 28px;}
     .ContactUsForm {
         padding: 35px 30px;
-    }
-    .ContactUsForm p {
-    margin-top: 10px;
-    margin-bottom: 34px;
-    font-size: 14px;
-}
+    } 
 }
 
 @media only screen and (max-width:575px) {
@@ -165,9 +148,10 @@
 @media only screen and (max-width:425px) {
     .ContactUsForm h5{
         font-size: 18px;
+        margin-bottom: 18px;
     }
     .ContactUsForm h5 img{width: 24px;}
     .ContactUsForm {
-        padding: 25px 18px;
+        padding: 25px 16px;
     }
 }

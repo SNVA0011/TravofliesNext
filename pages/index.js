@@ -1,11 +1,9 @@
- 
+
 import PageHead from '../component/PageHead';
-import { siteid } from '../utils/static'; 
+import { siteid } from '../utils/static';
 import SpaceMy from '../component/SpaceHoriztal/SpaceMy';
 import RecentBlog from '../component/RecentBlog';
-import AboutDiscoverBx from '../component/AboutDiscover/AboutDiscoverBx';
-import OurServiceBx from '../component/OurService/OurServiceBx';
-import AchieveBx from '../component/Achievements/AchieveBx';
+import AboutDiscoverBx from '../component/AboutDiscover/AboutDiscoverBx'; 
 import Enginebox from '../component/EngineBlock/Enginebox';
 
 export default function Home({ allbloglist }) {
@@ -23,8 +21,8 @@ export default function Home({ allbloglist }) {
         <div className='business-main'>
           <main id="main" className="site-main overflow">
 
-           {/*---- Engine Box ----*/}
-             <Enginebox />
+            {/*---- Engine Box ----*/}
+            <Enginebox />
 
             {/*---- About US ----*/}
             <AboutDiscoverBx
@@ -42,59 +40,7 @@ export default function Home({ allbloglist }) {
               }}
             />
 
-
-            {/*---- OurService ----*/}
-            <OurServiceBx
-              title="Our Services"
-              Services={[
-                {
-                  'title': 'International hotel reservation.',
-                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
-                },
-                {
-                  'title': 'Reservation of international plane.',
-                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
-                },
-                {
-                  'title': 'Hotel reservation for a group.',
-                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
-                },
-                {
-                  'title': 'Special offers for  couples.',
-                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
-                },
-                {
-                  'title': 'Book flights at affordable prices..',
-                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
-                },
-                {
-                  'title': 'Custom packages.',
-                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
-                },
-              ]}
-            />
-            
-
-            <AchieveBx  Achievements={[
-                {
-                  'number': 89,
-                  'content': 'Total Destination'
-                },
-                {
-                  'number': 1190,
-                  'content': 'Flight Booking'
-                },
-                {
-                  'number': 3000,
-                  'content': 'Happy People'
-                },
-                {
-                  'number': 1000,
-                  'content': 'Hotel Reservation'
-                },
-              ]}/>
-
-
+  
             {/*---- latest news ----*/}
             <SpaceMy>
               <RecentBlog
@@ -106,7 +52,7 @@ export default function Home({ allbloglist }) {
                 readmore={`Read more`}
                 noitem={`No items found !`}
                 admintext={`Travel`}
-                showitem={6}
+                showitem={3}
                 Thumbnail={true}
                 RecentBlog={true}
               />

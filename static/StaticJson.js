@@ -78,15 +78,10 @@ export const PageStaicJson = (page) => {
             },
             'ConnectWithUs' : {
                 'heading':'Connect  With Us',
-                'LinksUrl' : [
+                'LinksUrl' : [ 
                     {
-                        'title': '301 B, St George, UT  84770, USA',
-                        'url': 'http://maps.google.com/?q=301 B, St George, UT  84770, USA ',
-                        'icon': 'mdi-address.png'
-                    },
-                    {
-                        'title': 'support@travoflies.com',
-                        'url': 'mailto:support@travoflies.com',
+                        'title': 'info@travoflies.com',
+                        'url': 'mailto:info@travoflies.com',
                         'icon': 'outline-email.png'
                     },
                     {

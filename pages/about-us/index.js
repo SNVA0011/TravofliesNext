@@ -3,6 +3,7 @@ import PageHead from '../../component/PageHead'
 import BreadHero from '../../component/Breadcrumb/BreadHero'
 import PageHeading from '../../component/HeadingStyle/PageHeading'
 import SpaceMy from '../../component/SpaceHoriztal/SpaceMy'
+import AchieveBx from '../../component/Achievements/AchieveBx';
 import { Col, Row } from 'react-bootstrap'
 import TimelineStep from '../../component/StepTimeline/TimelineStep'
 import styles from "./about.module.css"
@@ -36,11 +37,11 @@ const Aboutus = () => {
                         </div>
                     </Col>
                     <Col xs={12} lg={7} xl={6} className={`mt-5 mt-lg-0 ${styles.OurStoryCenter}`}>
-                        <PageHeading title={'About US'} /> 
+                        <PageHeading title={'About US'} />
                         <div className={styles.mtDescripInf}>
                             <p className={styles.DescripInf}>
-                            Lorem ipsum dolor sit amet consectetur. Nisi ut massa id dignissim ullamcorper maecenas massa. Phasellus mi egestas egestas sit. Mi lacus lacus arcu interdum tristique proin. Fringilla suscipit risus elit vehicula. Vestibulum id sit sed nisl leo volutpat viverra. Proin in quam faucibus eget ut elementum. Aliquam nisl ipsum elementum massa imperdiet in viverra sollicitudin tellus. Viverra sed ridiculus dolor sit cursus a pellentesque commodo.
-</p>
+                                Lorem ipsum dolor sit amet consectetur. Nisi ut massa id dignissim ullamcorper maecenas massa. Phasellus mi egestas egestas sit. Mi lacus lacus arcu interdum tristique proin. Fringilla suscipit risus elit vehicula. Vestibulum id sit sed nisl leo volutpat viverra. Proin in quam faucibus eget ut elementum. Aliquam nisl ipsum elementum massa imperdiet in viverra sollicitudin tellus. Viverra sed ridiculus dolor sit cursus a pellentesque commodo.
+                            </p>
                             <div className='text-left'>
                                 <TimelineStep AboutPage={true}
                                     ContentArray={[
@@ -75,9 +76,29 @@ const Aboutus = () => {
             </SpaceMy>
 
 
+            {/*---- Why Choose Us ----*/} 
+                <AchieveBx Achievements={[
+                    {
+                        'number': 89,
+                        'content': 'Total Destination'
+                    },
+                    {
+                        'number': 1190,
+                        'content': 'Flight Booking'
+                    },
+                    {
+                        'number': 3000,
+                        'content': 'Happy People'
+                    },
+                    {
+                        'number': 1000,
+                        'content': 'Hotel Reservation'
+                    },
+                ]} /> 
 
-            {/*---- Why Choose Us ----*/}
+
             <SpaceMy bgWhiteChoose={true}>
+
                 <div className='text-center'>
                     <PageHeading title={'Why Choose Us'} />
                 </div>

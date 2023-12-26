@@ -43,7 +43,7 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
       },
       575: {
         slidesPerView: 2,
-        spaceBetween: 15,
+        spaceBetween: 10,
       },
       992: {
         slidesPerView: 3,
@@ -60,7 +60,7 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
           {allbloglist?.length > 0 ? (
             <Swiper className={'RecentBlogSlide'} {...slideOpt}>
               {allbloglist.slice(0, showitem).filter((items) => items.status === "Active").map((items, i) => {
-                const ImgPath = items.imgUrl === undefined || items.imgUrl === null || items.imgUrl === '' ? "/images/blogthumbnail.png" : items.imgUrl
+                const ImgPath = i == 0 ? "/images/plane-window.jpg" : i == 1 ? "/images/blogthumbnail.png" : i == 2 ? "/images/airport-img.jpg" : ""
                 return (
                   <SwiperSlide key={i}>
                     <Link href={`/${path}/${items.titleUrl}`}>

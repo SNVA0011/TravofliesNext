@@ -1,21 +1,10 @@
-.DescripInf {
-    color: #838282;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 29px;
-    margin-bottom: 38px;
-}
+ 
 .mtDescripInf {
     margin-top: 44px;
 } 
 
 @media only screen and (max-width:575px) {
-    .DescripInf{
-        font-size: 14px;
-        line-height: 1.8;
-        margin-bottom: 30px;
-    }
+ 
     .mtDescripInf {
         margin-top: 36px;
     }

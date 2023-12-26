@@ -1,3 +1,7 @@
+.AchievementsBx{
+   background: -webkit-gradient(linear,  left top, left bottom,  from(rgba(255,255,255,0)),color-stop(57%, rgba(255,255,255,1)),to(rgba(255,255,255,1)));background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 57%,rgba(255,255,255,1) 100%);background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 57%,rgba(255,255,255,1) 100%);background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 57%,rgba(255,255,255,1) 100%);background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 57%,rgba(255,255,255,1) 100%);
+
+}
 .AchievementsBx .AchievContainer {
    border-radius: 12px;
    background: #18978F;
@@ -6,8 +10,7 @@
    padding-top: 45px;
    padding-bottom: 45px;
    text-align: center;
-   overflow: hidden;
-   margin-top: -80px;
+   overflow: hidden; 
 }
 
 .AchievementsBx h5,
@@ -69,10 +72,7 @@
 }
 
 @media only screen and (max-width:991px) {
-   .AchievementsBx .AchievContainer {
-      margin-top: -70px;
-   }
-
+ 
    .AchievementsBox {
       border-bottom: solid 1px #21a39a;
       border-width: 1px;
@@ -92,10 +92,7 @@
 }
 
 @media only screen and (max-width:767px) {
-   .AchievementsBx .AchievContainer {
-      margin-top: -60px;
-   }
-
+ 
    .AchievementsBx h5,
    .AchievementsBx p {
       font-size: 18px;
@@ -103,9 +100,7 @@
 }
 
 @media only screen and (max-width:575px) {
-   .AchievementsBx .AchievContainer {
-      margin-top: -50px;
-   }
+ 
 
    .AchievementsBx {
       padding-left: 15px;

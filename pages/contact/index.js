@@ -33,36 +33,24 @@ const Contact = () => {
                     <Col xs={12} lg={5}>
                         <PageHeading title={'Contact Us'} />
 
-                        <div className={styles.mtDescripInf}>
-                            <p className={styles.DescripInf}>
-                                Lorem ipsum dolor sit amet consectetur. Ullamcorper malesuada vel et id nulla neque tincidunt tortor. Nulla nec vitae quisque eget amet faucibus eget penatibus ipsum
-                            </p>
+                        <div className={styles.mtDescripInf}> 
 
                             <TimelineStep LinkArray={[
                                 {
-                                    'url': `mailto:support@travoflies.com`,
+                                    'url': `mailto:info@travoflies.com`,
                                     'icon': '/images/email-icn.png',
                                     'iconImg': true,
                                     'heading': 'Email Address',
-                                    'content': 'Support@travoflies.com',
+                                    'content': 'info@travoflies.com',
                                 },
                                 {
-                                    'url': `tel:+91XXXXXXXXXX`,
+                                    'url': `tel:+1-802-341-3461`,
                                     'icon': '/images/phone-icn.png',
                                     'iconImg': true,
                                     'heading': 'Phone Number',
-                                    'content': '+91XXXXXXXXXX',
+                                    'content': '+1-802-341-3461',
                                 },
-                            ]}
-                                ContentArray={[
-                                    {
-                                        'icon': '/images/email-icn.png',
-                                        'iconImg': true,
-                                        'heading': 'Address',
-                                        'content': 'Lorem ipsum dolor sit amet consectetur.',
-                                        'type': 'lg'
-                                    }
-                                ]} />
+                            ]}  />
                         </div>
 
                     </Col>
