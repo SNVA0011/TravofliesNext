@@ -31,7 +31,7 @@ export default function Home({ allbloglist }) {
               ThumbnailPath="/images/aboutHome.png"
               Heading="About us"
               ContentOne="Lorem ipsum dolor sit amet consectetur. Nisi ut massa id dignissim ullamcorper maecenas massa. Phasellus mi egestas egestas sit. Mi lacus lacus arcu interdum tristique proin. Fringilla suscipit risus elit vehicula. Vestibulum id sit sed nisl leo volutpat viverra. Proin in quam faucibus eget ut elementum. Aliquam nisl ipsum elementum massa imperdiet in viverra sollicitudin tellus. Viverra sed ridiculus dolor sit cursus a pellentesque commodo.Viverra sed ridiculus dolor sit cursus a pellentesque commodo."
-              ContentTwo=""
+              ContentTwo="Lorem ipsum dolor sit amet consectetur. Nisi ut massa id dignissim ullamcorper maecenas massa. Phasellus mi egestas egestas sit. Mi lacus lacus arcu interdum tristique proin. Fringilla suscipit risus elit vehicula. Vestibulum id sit sed nisl leo volutpat viverra"
               Discover={{
                 'url': '/about-us',
                 'title': 'Discover more'
