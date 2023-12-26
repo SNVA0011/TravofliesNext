@@ -43,11 +43,15 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
       },
       575: {
         slidesPerView: 2,
-        spaceBetween: 10,
+        spaceBetween: 12,
       },
       992: {
         slidesPerView: 3,
-        spaceBetween: 15,
+        spaceBetween: 20,
+      },
+      1300: {
+        slidesPerView: 3,
+        spaceBetween: 29,
       }
     },
     modules: [Navigation, Autoplay, Pagination],

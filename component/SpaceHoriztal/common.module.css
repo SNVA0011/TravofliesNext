@@ -9,7 +9,9 @@
     background-repeat: no-repeat;
     background-position: left top 9px;
 }
-
+.bgWhite{
+    background-color: #ffffff;
+}
 .bgWhiteChoose {
     background-color: #ffffff;
     background-image: url('/images/whychoose-leftwv.png'), url('/images/whychoose-rightwv.png');

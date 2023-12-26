@@ -291,6 +291,16 @@ width: 0;
         color: #3A3A3A;
         font-size: 15px;
     }
+
+
+    .NavbarMain .NavbarNav .NavbarLink.NavbarLinkAct,
+    .HomeHeader .NavbarMain .NavbarNav .NavbarLink.NavbarLinkAct,
+    .StickyHeader .NavbarMain .NavbarNav .NavbarLink.NavbarLinkAct{
+        color: #18978f;
+    } 
+     
+
+
     .NavbarImage {
         width: 140px;
     }

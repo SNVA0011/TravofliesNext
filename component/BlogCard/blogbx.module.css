@@ -60,6 +60,7 @@
 .ViewMoreBlog.borderTp {
     border-top: 1px solid #18978F;
     min-height: 462px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -241,7 +242,7 @@
 /* responsive */
 @media only screen and (min-width:992px) {
     .ViewMoreBlog.borderTp {
-      margin-bottom: 0;
+      margin-bottom: 3px;
     }
 }
 @media only screen and (max-width:1299px) {
@@ -276,8 +277,9 @@
         margin-bottom: 16px;
     } 
     .ViewMoreBlog.borderTp {
-        min-height: 400px;
+        min-height: 468px;
     }
+  
 }
 
 @media only screen and (max-width:767px) {
@@ -300,6 +302,9 @@
     .bxSubs {
         margin-top: 16px;
         margin-bottom: 14px;
+    }
+    .ViewMoreBlog.borderTp {
+        min-height: 400px;
     }
 }
 

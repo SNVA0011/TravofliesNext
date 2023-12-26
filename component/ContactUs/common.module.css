@@ -69,7 +69,7 @@
 }
 
 .ContactUsForm .FrmGroup {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
 }
 
 .FrmButton {
@@ -95,7 +95,7 @@
 @media only screen and (max-width:1199px) {
 
     .ContactUsForm .FrmGroup {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 .ContactUsForm {
     padding: 40px 35px;
@@ -110,7 +110,7 @@
 
 @media only screen and (max-width:991px) { 
     .ContactUsForm .FrmGroup {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 .ContactUsForm h5{
     font-size: 20px;

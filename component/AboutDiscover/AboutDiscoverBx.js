@@ -12,8 +12,8 @@ const AnimatedNumbers = dynamic(
 
 const AboutDiscoverBx = ({ ThumbnailPath, Heading, ContentOne, ContentTwo, Discover, HappyCustomer }) => {
     return (
-        <SpaceMy>
-            <div className={styles.AboutDiscover}>
+        <SpaceMy bgWhite={true}>
+                    <div className={styles.AboutDiscover}>
                 <Row className='align-items-xl-center'>
                     <Col xs={12} lg={5} xl={6} className={`${styles.OurPlanCenter} ${styles.OurPlanHidden}`}>
                         <div className={styles.OurPlan}>
