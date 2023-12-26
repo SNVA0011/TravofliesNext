@@ -4,17 +4,21 @@ import Pageerror from "../../component/PageError/Pageerror";
 import { useRouter } from "next/router";
 import Moment from 'react-moment';
 import PageHead from "../../component/PageHead";
-import { siteid } from "../../utils/static";
+import { FlightSiteid, siteid } from "../../utils/static";
 import ReactHtmlParser from 'react-html-parser';
 import SpaceMy from "../../component/SpaceHoriztal/SpaceMy";
 import styles from "./slugdt.module.css"
 import ChpFlgCard from "../../component/ChpFlight/ChpFlgCard";
 import LinkButtonSite from "../../component/ButtonSite/LinkButtonSite";
 import PageHeading from "../../component/HeadingStyle/PageHeading";
+import { getApiData } from "../../utils/GetApiResp";
 
 
-export default function blogDetails({ singleblog, allblog }) {
+export default function blogDetails({ SingleFlight, flightslist }) {
   const location = useRouter();
+
+  console.log('SingleFlight-',SingleFlight)
+  console.log('flightslist-',flightslist)
 
   // isFallback
   if (location.isFallback) {
@@ -29,16 +33,16 @@ export default function blogDetails({ singleblog, allblog }) {
   return (
     <>
 
-      {singleblog?.length > 0 ? (
+      {SingleFlight?.length > 0 ? (
         <>
           <PageHead
-            title={ReactHtmlParser(singleblog[0].title)}
-            description={ReactHtmlParser(singleblog[0].description)}
-            keywords={ReactHtmlParser(singleblog[0].keywords)}
+            title={ReactHtmlParser(SingleFlight[0].title)}
+            description={ReactHtmlParser(SingleFlight[0].description)}
+            keywords={ReactHtmlParser(SingleFlight[0].keywords)}
           />
 
           <BreadHero
-            heading={singleblog[0].title}
+            heading={SingleFlight[0].title}
             blogHeading={true}
             pathBetween={[
               {
@@ -52,7 +56,7 @@ export default function blogDetails({ singleblog, allblog }) {
 
           <SpaceMy>
             <div className="blog-inner-box">
-              {singleblog[0].content === "" ? (
+              {SingleFlight[0].content === "" ? (
                 <p className="pb-2">No Content found</p>
               ) : (
                 <>
@@ -62,7 +66,7 @@ export default function blogDetails({ singleblog, allblog }) {
                     </li>
                     <li>
                       <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
-                      <Moment date={singleblog[0].posttime} format="DD MMM-YYYY" />
+                      <Moment date={SingleFlight[0].posttime} format="DD MMM-YYYY" />
                     </li>
                     <li>
                       <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
@@ -73,7 +77,7 @@ export default function blogDetails({ singleblog, allblog }) {
                   <div
                     className={styles.contentBasic}
                     dangerouslySetInnerHTML={{
-                      __html: singleblog[0].content,
+                      __html: SingleFlight[0].content,
                     }}></div>
                 </>
               )}
@@ -88,33 +92,8 @@ export default function blogDetails({ singleblog, allblog }) {
 
               <div className='mt-58 mb-4 text-left'>
                 <ChpFlgCard
-                  defaulText={'Cheap Flights to'}
-                  listItems={[
-                    {
-                      'url': '/cheap-flight/pensacola-pns',
-                      'title': 'South Affrica'
-                    },
-                    {
-                      'url': '/cheap-flight/pensacola-pns',
-                      'title': 'South Affrica'
-                    },
-                    {
-                      'url': '/cheap-flight/pensacola-pns',
-                      'title': 'South Affrica'
-                    },
-                    {
-                      'url': '/cheap-flight/pensacola-pns',
-                      'title': 'South Affrica'
-                    },
-                    {
-                      'url': '/cheap-flight/pensacola-pns',
-                      'title': 'South Affrica'
-                    },
-                    {
-                      'url': '/cheap-flight/pensacola-pns',
-                      'title': 'South Affrica'
-                    }
-                  ]}
+                  path={`cheap-flight`}
+                  flightslist={flightslist}
                 />
               </div>
 
@@ -123,12 +102,7 @@ export default function blogDetails({ singleblog, allblog }) {
                   View All
                 </LinkButtonSite>
               </div>
-            </div>
-
-
-
-
-
+            </div> 
 
           </SpaceMy>
 
@@ -149,90 +123,38 @@ export default function blogDetails({ singleblog, allblog }) {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  // single slug
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  var raw = JSON.stringify({
-    id: "",
-    title: "",
-    titleUrl: `${params.slug}`,
-    content: "",
-    description: "",
-    keywords: "",
-    posttime: "",
-    status: "",
-    heading: "",
-    img_url: "",
-    siteId: siteid,
-    categoryName: "",
-    blogdes2: "",
-    blogTagsName2: "",
-    extarTag: "",
-    tfnHeader: "",
-    tfnFooter1: "",
-    tfnFooter2: "",
-    tfnFooter3: "",
-    tfnPopup: "",
+
+  // Get single Flights
+  const GetSingleFlight = await getApiData(`https://cms.travomint.com/route-source/showRouteSourceContent?authcode=Trav3103s987876`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      "siteId": FlightSiteid,
+      "language": "eng",
+      "pageType": "cheap-flight",
+      "url": params.slug
+    }),
+    redirect: 'follow'
   });
 
-  var requestOptions = {
-    method: "POST",
-    headers: myHeaders,
-    body: raw,
-    redirect: "follow",
-  };
-  const res = await fetch(
-    "https://cms.travomint.com/travoles-content/blogdatabyid?authcode=Trav3103s987876",
-    requestOptions
-  );
-  const onejson = await res.json();
 
-  // All blog
-  var myHeadersal = new Headers();
-  myHeadersal.append("Content-Type", "application/json");
-
-  var rawall = JSON.stringify({
-    id: "",
-    title: "",
-    titleUrl: "",
-    content: "",
-    description: "",
-    keywords: "",
-    posttime: "",
-    status: "",
-    heading: "",
-    img_url: "",
-    siteId: siteid,
-    categoryName: "",
-    blogdes2: "",
-    blogTagsName2: "",
-    extarTag: "",
-    tfnHeader: "",
-    tfnFooter1: "",
-    tfnFooter2: "",
-    tfnFooter3: "",
-    tfnPopup: "",
+  // Get All Flights
+  const GetFlightsData = await getApiData(`https://cms.travomint.com/route-source/showRouteSourceList?authcode=Trav3103s987876`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      "siteId": FlightSiteid,
+      "pageType": "cheap-flight"
+    }),
+    redirect: 'follow'
   });
-
-  var requestOptions = {
-    method: "POST",
-    headers: myHeadersal,
-    body: rawall,
-    redirect: "follow",
-  };
-  const resall = await fetch(
-    "https://cms.travomint.com/travoles-content/showblogdata?authcode=Trav3103s987876",
-    requestOptions
-  );
-  const multiplejson = await resall.json();
- 
 
   return {
     props: {
-      singleblog: onejson.response,
-      allblog: multiplejson.response, 
+      SingleFlight: GetSingleFlight.response || [],
+      flightslist: GetFlightsData.response || [],
     },
-    revalidate: 10 
+    revalidate: 10
   };
 }
 
@@ -240,45 +162,21 @@ export async function getStaticProps(context) {
 
 // paths -> slugs which are allowed
 export const getStaticPaths = async () => {
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-
-  var raw = JSON.stringify({
-    "id": "",
-    "title": "",
-    "titleUrl": "",
-    "content": "",
-    "description": "",
-    "keywords": "",
-    "posttime": "",
-    "status": "",
-    "heading": "",
-    "img_url": "",
-    "siteId": siteid,
-    "categoryName": "",
-    "blogdes2": "",
-    "blogTagsName2": "",
-    "extarTag": "",
-    "tfnHeader": "",
-    "tfnFooter1": "",
-    "tfnFooter2": "",
-    "tfnFooter3": "",
-    "tfnPopup": ""
-  });
-
-  var requestOptions = {
+  // Get All Flights
+  const GetFlightsData = await getApiData(`https://cms.travomint.com/route-source/showRouteSourceList?authcode=Trav3103s987876`, {
     method: 'POST',
-    headers: myHeaders,
-    body: raw,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      "siteId": FlightSiteid,
+      "pageType": "cheap-flight"
+    }),
     redirect: 'follow'
-  };
-  const res = await fetch("https://cms.travomint.com/travoles-content/showblogdata?authcode=Trav3103s987876", requestOptions)
-  const json = await res.json()
-  const data = json.response;
+  });
+  const data = GetFlightsData.response || [];
 
   // fallback ->
   const paths = data.map((post) => ({
-    params: { slug: post.titleUrl }
+    params: { slug: post.url }
   }))
 
   return {

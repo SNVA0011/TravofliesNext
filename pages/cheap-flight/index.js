@@ -4,11 +4,15 @@ import BreadHero from '../../component/Breadcrumb/BreadHero'
 import PageHeading from '../../component/HeadingStyle/PageHeading'
 import SpaceMy from '../../component/SpaceHoriztal/SpaceMy'
 import ChpFlgCard from '../../component/ChpFlight/ChpFlgCard'
+import { getApiData } from '../../utils/GetApiResp'
+import { FlightSiteid } from '../../utils/static'
 
-const cheapFlight = () => {
+const cheapFlight = ({ flightslist }) => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  console.log('flightslist-', flightslist)
 
   return (
     <>
@@ -31,41 +35,8 @@ const cheapFlight = () => {
 
         <div className='mt-58'>
           <ChpFlgCard
-            defaulText={'Cheap Flights to'}
-            listItems={[
-              {
-                'url': '/cheap-flight/pensacola-pns',
-                'title': 'South Affrica'
-              },
-              {
-                'url': '/cheap-flight/pensacola-pns',
-                'title': 'South Affrica'
-              },
-              {
-                'url': '/cheap-flight/pensacola-pns',
-                'title': 'South Affrica'
-              },
-              {
-                'url': '/cheap-flight/pensacola-pns',
-                'title': 'South Affrica'
-              },
-              {
-                'url': '/cheap-flight/pensacola-pns',
-                'title': 'South Affrica'
-              },
-              {
-                'url': '/cheap-flight/pensacola-pns',
-                'title': 'South Affrica'
-              },
-              {
-                'url': '/cheap-flight/pensacola-pns',
-                'title': 'South Affrica'
-              },
-              {
-                'url': '/cheap-flight/pensacola-pns',
-                'title': 'South Affrica'
-              },
-            ]}
+            path={`cheap-flight`}
+            flightslist={flightslist}
           />
         </div>
       </SpaceMy>
@@ -74,6 +45,29 @@ const cheapFlight = () => {
 }
 
 export default cheapFlight
+
+
+
+export const getStaticProps = async ({ params }) => {
+  // Get All Flights
+  const GetFlightsData = await getApiData(`https://cms.travomint.com/route-source/showRouteSourceList?authcode=Trav3103s987876`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      "siteId": FlightSiteid,
+      "pageType": "cheap-flight"
+    }),
+    redirect: 'follow'
+  });
+
+  return {
+    props: {
+      flightslist: GetFlightsData.response || []
+    },
+    revalidate: 10
+  }
+}
+
 
 
 

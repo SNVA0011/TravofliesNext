@@ -100,23 +100,7 @@ export default function Footer() {
                             })
                           }
                         </ul>
-                      }
-
-
-                      {Footer?.ConnectWithUs?.Social?.length > 0 &&
-                        <div className={styles.socialFooter}>
-                          {
-                            Footer?.ConnectWithUs?.Social.map((item, index) => {
-                              return (
-                                <Link href={item.url} key={index}>
-                                  <a target="_blank" className="d-inline-flex flex-column align-items-center justify-content-center">
-                                    <img src={`/images/${item.icon}`} alt={item.icon} /></a>
-                                </Link>
-                              )
-                            })
-                          }
-                        </div>
-                      }
+                      } 
                     </div>
                   </Col>
                 </Row>

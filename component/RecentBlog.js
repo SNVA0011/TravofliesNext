@@ -1,28 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from "next/router";
+import React from 'react'; 
 import BlogTile from './BlogCard/BlogTile';
 import PageHeading from './HeadingStyle/PageHeading';
 import LinkButtonSite from './ButtonSite/LinkButtonSite'; 
 
 
 const RecentBlog = ({ recentitem, path, title, viewcontent, readmore, noitem, admintext ,showitem, Thumbnail, RecentBlog}) => {
-    const location = useRouter();
-
-    const [blogName, setblogName] = useState("");
-
-    const makeBold = (item, keyword) => {
-        var re = new RegExp(keyword, 'g')
-        return (
-            item.replace(re, '<b>' + keyword + '</b>')
-        )
-    }
-
-    useEffect(() => {
-        setblogName("")
-    }, [location.asPath]);
-
-
-
 
     return (
         <>

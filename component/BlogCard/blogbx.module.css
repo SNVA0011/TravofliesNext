@@ -59,8 +59,12 @@
 
 .ViewMoreBlog.borderTp {
     border-top: 1px solid #18978F;
-    min-height: 462px;
+    min-height: 485px;
     -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+}
+
+.ViewMoreBlog.borderNone{
+min-height: 300px;
 }
 
 
@@ -263,8 +267,12 @@
     
 
 .ViewMoreBlog.borderTp {
-    min-height: 432px;
+    min-height: 455px;
 }
+
+.ViewMoreBlog.borderNone{
+    min-height: 310px;
+    }
 }
 
 @media only screen and (max-width:991px) {
@@ -277,9 +285,12 @@
         margin-bottom: 16px;
     } 
     .ViewMoreBlog.borderTp {
-        min-height: 468px;
+        min-height: 465px;
     }
-  
+ 
+.ViewMoreBlog.borderNone{
+    min-height: 300px;
+    }
 }
 
 @media only screen and (max-width:767px) {
@@ -306,6 +317,9 @@
     .ViewMoreBlog.borderTp {
         min-height: 400px;
     }
+    .ViewMoreBlog.borderNone{
+        min-height: 280px;
+        }
 }
 
 @media only screen and (max-width:575px) {
@@ -330,7 +344,7 @@
     }
 
     .ViewMoreBlog.borderTp {
-        min-height: 400px;
+        min-height: 420px;
     }
     .bxSubs {
         font-size: 12px;

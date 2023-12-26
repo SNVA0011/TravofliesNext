@@ -6,7 +6,7 @@ export const PageStaicJson = (page) => {
                 'url': '/'
             },
             {
-                'title': 'Artikal',
+                'title': 'Artikel',
                 'url': '/artikel'
             },
             {
@@ -38,6 +38,10 @@ export const PageStaicJson = (page) => {
                         'url': '/'
                     },
                     {
+                        'title': 'About Us',
+                        'url': '/about-us'
+                    },
+                    {
                         'title': 'Blog',
                         'url': '/blogs'
                     },
@@ -46,12 +50,12 @@ export const PageStaicJson = (page) => {
                         'url': '/cheap-flight'
                     },
                     {
-                        'title': 'About Us',
-                        'url': '/about-us'
+                        'title': 'Article',
+                        'url': '/article' 
                     },
                     {
-                        'title': 'Article',
-                        'url': '/article'
+                        'title': 'Contact-Us',
+                        'url': '/contact'
                     } 
                 ]
             },
@@ -59,21 +63,29 @@ export const PageStaicJson = (page) => {
                 'heading':'Our Services',
                 'LinksUrl' : [
                     {
-                        'title': 'Contact Us',
-                        'url': '/contact'
+                        'title': 'Artikel',
+                        'url': '/artikel'
                     },
                     {
-                        'title': 'Sitemap',
-                        'url': '/#!'
+                        'title': 'Articulo',
+                        'url': '/articulo'
                     },
                     {
-                        'title': 'Privacy Policy',
-                        'url': '/#!'
+                        'title': 'Nouvelles',
+                        'url': '/nouvelles'
                     },
                     {
-                        'title': 'Terms & Conditions',
-                        'url': '/#!'
-                    } 
+                        'title': 'Artigo',
+                        'url': '/artigo'
+                    },
+                    {
+                        'title': 'Bloggen',
+                        'url': '/bloggen'
+                    },
+                    {
+                        'title': 'Articolo',
+                        'url': '/articolo'
+                    }
                 ]
             },
             'ConnectWithUs' : {
@@ -115,4 +127,5 @@ export const PageStaicJson = (page) => {
     }
 }
 
-
+ 
+ 

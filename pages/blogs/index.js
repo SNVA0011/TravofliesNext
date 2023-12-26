@@ -5,6 +5,8 @@ import { siteid } from '../../utils/static';
 import PageHeading from '../../component/HeadingStyle/PageHeading';
 import SpaceMy from '../../component/SpaceHoriztal/SpaceMy'; 
 import BlogTile from '../../component/BlogCard/BlogTile';
+import { getApiData } from '../../utils/GetApiResp';
+
 
 export default function Blog({ allbloglist }) {
 
@@ -39,45 +41,15 @@ export default function Blog({ allbloglist }) {
 }
 
 
-
 export const getStaticProps = async ({ params }) => {
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
+  // Get All blogs
+  const GetBlogData = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
-  var raw = JSON.stringify({
-    "id": "",
-    "title": "",
-    "titleUrl": "",
-    "content": "",
-    "description": "",
-    "keywords": "",
-    "posttime": "",
-    "status": "",
-    "heading": "",
-    "img_url": "",
-    "siteId": siteid,
-    "categoryName": "",
-    "blogdes2": "",
-    "blogTagsName2": "",
-    "extarTag": "",
-    "tfnHeader": "",
-    "tfnFooter1": "",
-    "tfnFooter2": "",
-    "tfnFooter3": "",
-    "tfnPopup": ""
-  });
-
-  var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-  };
-  const res = await fetch("https://cms.travomint.com/travoles-content/showblogdata?authcode=Trav3103s987876", requestOptions)
-  const json = await res.json()
   return {
-    props: { allbloglist: json.response },
-    revalidate: 10 
+    props: {
+       allbloglist: GetBlogData 
+     },
+    revalidate: 10
   }
 }
 

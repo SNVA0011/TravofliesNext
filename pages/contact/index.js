@@ -37,11 +37,11 @@ const Contact = () => {
 
                             <TimelineStep LinkArray={[
                                 {
-                                    'url': `mailto:info@travoflies.com`,
+                                    'url': `mailto:support@travoflies.com`,
                                     'icon': '/images/email-icn.png',
                                     'iconImg': true,
                                     'heading': 'Email Address',
-                                    'content': 'info@travoflies.com',
+                                    'content': 'support@travoflies.com',
                                 },
                                 {
                                     'url': `tel:+1-802-341-3461`,

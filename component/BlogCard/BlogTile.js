@@ -21,7 +21,6 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
     return newString
   }
 
-
   // slideOpt
   const length = allbloglist?.length;
 
@@ -56,6 +55,8 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
     },
     modules: [Navigation, Autoplay, Pagination],
   };
+ 
+ 
 
   return (
     <>
@@ -63,21 +64,21 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
         <>
           {allbloglist?.length > 0 ? (
             <Swiper className={'RecentBlogSlide'} {...slideOpt}>
-              {allbloglist.slice(0, showitem).filter((items) => items.status === "Active").map((items, i) => {
+              {allbloglist.slice(0, showitem).filter((items) => items.status === "active").map((items, i) => {
                 const ImgPath = i == 0 ? "/images/plane-window.jpg" : i == 1 ? "/images/blogthumbnail.png" : i == 2 ? "/images/airport-img.jpg" : ""
                 return (
                   <SwiperSlide key={i}>
-                    <Link href={`/${path}/${items.titleUrl}`}>
-                      <a className={`d-flex flex-column ${styles.mbspace} ${styles.ViewMoreBlog} ${Thumbnail ? styles.borderTp : ''}`}>
+                    <Link href={`/${path}/${items.blog_url}`}>
+                      <a className={`d-flex flex-column ${styles.mbspace} ${styles.ViewMoreBlog} ${Thumbnail ? styles.borderTp : styles.borderNone}`}>
 
                         {Thumbnail && <div className={styles.imgCoverbg}>
-                          <img src={ImgPath} alt={ReactHtmlParser(items.heading)} />
+                          <img src={ImgPath} alt={ReactHtmlParser(items.title)} />
                         </div>}
 
                         <div className={`flex-grow-1 ${styles.abReadMore}`}>
                           <div className="post-info">
-                            <p className={styles.bxTitle}>{ReactHtmlParser(items.heading)}</p>
-                            <div className={styles.bxSubs} dangerouslySetInnerHTML={{ __html: removeHtml(items.content).substring(0, 300) + "..." }}></div>
+                            <p className={styles.bxTitle}>{ReactHtmlParser(items.title)}</p>
+                            <div className={styles.bxSubs} dangerouslySetInnerHTML={{ __html: removeHtml(items.desc).substring(0, 300) + "..." }}></div>
                           </div>
                         </div>
 
@@ -88,11 +89,11 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
                         <hr className={styles.hrReadMore}></hr>
 
                         <Row className={styles.postDateMore}>
-                          <Col xs={6}>
+                          <Col xs={7}>
                             <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
-                            <Moment date={items.posttime} format="DD MMM-YYYY" />
+                            <Moment date={items.created_at} format="DD MMM-YYYY" />
                           </Col>
-                          <Col xs={6} className="text-right">
+                          <Col xs={5} className="text-right">
                             <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
                             {admintext}
                           </Col>
@@ -113,19 +114,19 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
           <div className={styles.AllBlogWrap}>
             {allbloglist?.length > 0 ? (
               <Row className={styles.AllBlogRow}>
-                {allbloglist.slice(0, showitem).filter((items) => items.status === "Active").map((items, i) => (
+                {allbloglist.slice(0, showitem).filter((items) => items.status === "active").map((items, i) => (
                   <Col xs={12} sm={6} lg={4} key={i} className={styles.RoundBlogCol}>
-                    <Link href={`/${path}/${items.titleUrl}`}>
+                    <Link href={`/${path}/${items.blog_url}`}>
                       <a className={`d-flex flex-column ${styles.ViewMoreBlog} ${Thumbnail ? styles.borderTp : ''}`}>
 
                         {Thumbnail && <div className={styles.imgCoverbg}>
-                          <img src="/images/blogthumbnail.png" alt={ReactHtmlParser(items.heading)} />
+                          <img src="/images/blogthumbnail.png" alt={ReactHtmlParser(items.title)} />
                         </div>}
 
                         <div className={`flex-grow-1 ${styles.abReadMore}`}>
                           <div className="post-info">
-                            <p className={styles.bxTitle}>{ReactHtmlParser(items.heading)}</p>
-                            <div className={styles.bxSubs} dangerouslySetInnerHTML={{ __html: removeHtml(items.content).substring(0, 300) + "..." }}></div>
+                            <p className={styles.bxTitle}>{ReactHtmlParser(items.title)}</p>
+                            <div className={styles.bxSubs} dangerouslySetInnerHTML={{ __html: removeHtml(items.desc).substring(0, 300) + "..." }}></div>
                           </div>
                         </div>
 
@@ -136,11 +137,11 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
                         <hr className={styles.hrReadMore}></hr>
 
                         <Row className={styles.postDateMore}>
-                          <Col xs={6}>
+                          <Col xs={7}>
                             <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
-                            <Moment date={items.posttime} format="DD MMM-YYYY" />
+                            <Moment date={items.created_at} format="DD MMM-YYYY" />
                           </Col>
-                          <Col xs={6} className="text-right">
+                          <Col xs={5} className="text-right">
                             <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
                             {admintext}
                           </Col>

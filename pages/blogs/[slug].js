@@ -9,6 +9,7 @@ import { siteid } from "../../utils/static";
 import ReactHtmlParser from 'react-html-parser';
 import SpaceMy from "../../component/SpaceHoriztal/SpaceMy";
 import styles from "./slugdt.module.css"
+import { getApiData } from "../../utils/GetApiResp";
 
 
 export default function blogDetails({ singleblog, allblog }) {
@@ -30,9 +31,9 @@ export default function blogDetails({ singleblog, allblog }) {
       {singleblog?.length > 0 ? (
         <>
           <PageHead
-            title={ReactHtmlParser(singleblog[0].title)}
-            description={ReactHtmlParser(singleblog[0].description)}
-            keywords={ReactHtmlParser(singleblog[0].keywords)}
+            title={ReactHtmlParser(singleblog[0].meta_title)}
+            description={ReactHtmlParser(singleblog[0].meta_desc)}
+            keywords={ReactHtmlParser(singleblog[0].meta_keywords)}
           />
 
           <BreadHero
@@ -50,7 +51,7 @@ export default function blogDetails({ singleblog, allblog }) {
 
           <SpaceMy>
             <div className="blog-inner-box">
-              {singleblog[0].content === "" ? (
+              {singleblog[0].desc === "" ? (
                 <p className="pb-2">No Content found</p>
               ) : (
                 <>
@@ -60,7 +61,7 @@ export default function blogDetails({ singleblog, allblog }) {
                     </li>
                     <li>
                       <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
-                      <Moment date={singleblog[0].posttime} format="DD MMM-YYYY" />
+                      <Moment date={singleblog[0].created_at} format="DD MMM-YYYY" />
                     </li>
                     <li>
                       <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
@@ -71,7 +72,7 @@ export default function blogDetails({ singleblog, allblog }) {
                   <div
                     className={styles.contentBasic}
                     dangerouslySetInnerHTML={{
-                      __html: singleblog[0].content,
+                      __html: singleblog[0].desc,
                     }}></div>
                 </>
               )}
@@ -111,136 +112,29 @@ export default function blogDetails({ singleblog, allblog }) {
 export async function getStaticProps(context) {
   const { params } = context;
 
-  // single slug
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  var raw = JSON.stringify({
-    id: "",
-    title: "",
-    titleUrl: `${params.slug}`,
-    content: "",
-    description: "",
-    keywords: "",
-    posttime: "",
-    status: "",
-    heading: "",
-    img_url: "",
-    siteId: siteid,
-    categoryName: "",
-    blogdes2: "",
-    blogTagsName2: "",
-    extarTag: "",
-    tfnHeader: "",
-    tfnFooter1: "",
-    tfnFooter2: "",
-    tfnFooter3: "",
-    tfnPopup: "",
-  });
-
-  var requestOptions = {
-    method: "POST",
-    headers: myHeaders,
-    body: raw,
-    redirect: "follow",
-  };
-  const res = await fetch(
-    "https://cms.travomint.com/travoles-content/blogdatabyid?authcode=Trav3103s987876",
-    requestOptions
-  );
-  const onejson = await res.json();
+  // Single blog
+  const GetSingleBlog = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}/${params.slug}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   // All blog
-  var myHeadersal = new Headers();
-  myHeadersal.append("Content-Type", "application/json");
-
-  var rawall = JSON.stringify({
-    id: "",
-    title: "",
-    titleUrl: "",
-    content: "",
-    description: "",
-    keywords: "",
-    posttime: "",
-    status: "",
-    heading: "",
-    img_url: "",
-    siteId: siteid,
-    categoryName: "",
-    blogdes2: "",
-    blogTagsName2: "",
-    extarTag: "",
-    tfnHeader: "",
-    tfnFooter1: "",
-    tfnFooter2: "",
-    tfnFooter3: "",
-    tfnPopup: "",
-  });
-
-  var requestOptions = {
-    method: "POST",
-    headers: myHeadersal,
-    body: rawall,
-    redirect: "follow",
-  };
-  const resall = await fetch(
-    "https://cms.travomint.com/travoles-content/showblogdata?authcode=Trav3103s987876",
-    requestOptions
-  );
-  const multiplejson = await resall.json();
- 
+  const GetBlogData = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   return {
     props: {
-      singleblog: onejson.response,
-      allblog: multiplejson.response, 
+      singleblog: GetSingleBlog,
+      allblog: GetBlogData, 
     }, 
     revalidate: 10 
   };
 }
 
 
-
 // paths -> slugs which are allowed
 export const getStaticPaths = async () => {
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-
-  var raw = JSON.stringify({
-    "id": "",
-    "title": "",
-    "titleUrl": "",
-    "content": "",
-    "description": "",
-    "keywords": "",
-    "posttime": "",
-    "status": "",
-    "heading": "",
-    "img_url": "",
-    "siteId": siteid,
-    "categoryName": "",
-    "blogdes2": "",
-    "blogTagsName2": "",
-    "extarTag": "",
-    "tfnHeader": "",
-    "tfnFooter1": "",
-    "tfnFooter2": "",
-    "tfnFooter3": "",
-    "tfnPopup": ""
-  });
-
-  var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-  };
-  const res = await fetch("https://cms.travomint.com/travoles-content/showblogdata?authcode=Trav3103s987876", requestOptions)
-  const json = await res.json()
-  const data = json.response;
+  const data = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   // fallback -> 
   const paths = data.map((post) => ({
-    params: { slug: post.titleUrl }
+    params: { slug: post.blog_url }
   }))
 
   return {
