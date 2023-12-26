@@ -10,7 +10,10 @@ import { PageStaicJson } from '../../static/StaticJson';
 
 export default function Header() {
 
+    const router = useRouter();
     const HeaderUrl = PageStaicJson('header');
+    const ForHomePage = router?.asPath === '/' 
+ 
 
     // sticky header
     const [sticky, setSticky] = useState(false);
@@ -33,7 +36,7 @@ export default function Header() {
 
     return (
         <>
-            <header className={`${styles.siteHeader} ${sticky ? styles.StickyHeader : ''}`}>
+            <header className={`${styles.siteHeader} ${sticky ? styles.StickyHeader : ''} ${ForHomePage ? styles.HomeHeader : ''}`}>
                 <Navbar collapseOnSelect expanded={expanded} expand="md" className={styles.NavbarMain}>
                     <Container>
                         <Navbar.Brand>
@@ -53,7 +56,7 @@ export default function Header() {
                         </div>
 
 
-                        <Navbar.Collapse className={styles.NavbarColp}>
+                        <Navbar.Collapse className={`${styles.NavbarColp} ${ForHomePage ? '' : styles.Other}`}>
                             {HeaderUrl?.length > 0 && <Nav className="ml-auto">
                                 <ul className={`navbar-nav ${styles.NavbarNav}`}>
                                     {HeaderUrl.map((item, index) => {
@@ -76,7 +79,7 @@ export default function Header() {
                 </Navbar>
             </header>
 
-{expanded && <div className={`d-md-none ${styles.offcanvasBackdrop}`} onClick={() => window.innerWidth < 768 ? setExpanded(false) : ''}></div>}
+{expanded && <div className={`d-md-none ${styles.offcanvasBackdrop} ${ForHomePage ? '' : styles.Other}`} onClick={() => window.innerWidth < 768 ? setExpanded(false) : ''}></div>}
             
 
             <div className='new_header_area_empty full-w'></div>

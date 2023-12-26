@@ -1,0 +1,173 @@
+.ContactUsForm {
+    border-radius: 12px;
+    background: #FFF;
+    -webkit-box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.08);
+    padding: 49px 44px;
+    width: 100%;
+    max-width: 586px;
+    margin-left: auto;
+} 
+
+.ContactUsForm h5 img {
+    width: 34px;
+    position: relative;
+    top: -2px;
+    margin-right: 6px
+}
+
+.ContactUsForm h5 {
+    color: #363535;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.ContactUsForm p {
+    color: #363535;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 18px;
+    margin-bottom: 38px;
+}
+
+.ContactUsForm .FormControl {
+    height: 50px;
+    border-radius: 4px;
+    background: #F1F1F3;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #000000;
+}
+
+.ContactUsForm .FormControl:focus {
+    box-shadow: 0 0 0 0.2rem rgb(17 130 122 / 25%);
+    background-color: #fff;
+}
+
+.ContactUsForm .FormControl::-webkit-input-placeholder {
+    color: #838282;
+}
+
+.ContactUsForm .FormControl::-moz-placeholder {
+    color: #838282;
+}
+
+.ContactUsForm .FormControl:-ms-input-placeholder {
+    color: #838282;
+}
+
+.ContactUsForm .FormControl:-moz-placeholder {
+    color: #838282;
+}
+
+.ContactUsForm textarea.FormControl {
+    height: 180px;
+    resize: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ContactUsForm .FrmGroup {
+    margin-bottom: 38px;
+}
+
+.FrmButton {
+    color: #ffffff;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    padding: 10px 17px;
+    border-radius: 10px;
+    background: #11827B;
+    width: 100%;
+}
+
+.FrmButton:hover,
+.FrmButton:focus,
+.FrmButton:active {
+    background: #0C5853;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+/* responsive */
+@media only screen and (max-width:1199px) {
+
+    .ContactUsForm .FrmGroup {
+    margin-bottom: 30px;
+}
+.ContactUsForm {
+    padding: 40px 35px;
+}
+.ContactUsForm h5{
+    font-size: 22px;
+}
+
+.ContactUsForm h5 img{width: 32px;}
+}
+
+@media only screen and (max-width:991px) { 
+    .ContactUsForm .FrmGroup {
+    margin-bottom: 25px;
+}
+.ContactUsForm h5{
+    font-size: 20px;
+}
+.ContactUsForm h5 img{width: 30px;}
+.ContactUsForm {
+    margin-right: 0;
+    margin-left: 0;
+    max-width: none;
+}
+.ContactUsForm p {
+    margin-top: 14px;
+    margin-bottom: 34px;
+}
+}
+
+@media only screen and (max-width:767px) {
+    .FrmButton {
+        font-size: 16px;
+    } 
+    .ContactUsForm h5 img{width: 28px;}
+    .ContactUsForm {
+        padding: 35px 30px;
+    }
+    .ContactUsForm p {
+    margin-top: 10px;
+    margin-bottom: 34px;
+    font-size: 14px;
+}
+}
+
+@media only screen and (max-width:575px) {
+    .FrmButton {
+        font-size: 15px;
+        min-width: 130px;
+    }
+    .ContactUsForm h5 img{width: 26px;}
+    .ContactUsForm {
+        padding: 30px 22px;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    .ContactUsForm h5{
+        font-size: 18px;
+    }
+    .ContactUsForm h5 img{width: 24px;}
+    .ContactUsForm {
+        padding: 25px 18px;
+    }
+}

@@ -6,6 +6,7 @@ import SpaceMy from '../../component/SpaceHoriztal/SpaceMy'
 import { Col, Row } from 'react-bootstrap'
 import styles from "./contact.module.css"
 import TimelineStep from '../../component/StepTimeline/TimelineStep'
+import ContactUsForm from '../../component/ContactUs/ContactUsForm'
 
 
 const Contact = () => {
@@ -16,9 +17,9 @@ const Contact = () => {
     return (
         <>
             <PageHead
-                title="Cheap Flight, Tickets, and Airfare Deals - Travoflies.com"
-                description="Book a cheap flight on Travoflies.com to find amazing ticket deals to all your favorite destinations and save money. Get cheap airfare offers at the best prices."
-                keywords="Cheap Flight, Tickets, Cheap Airfare Deals"
+                title="Contact | Travoflies.com"
+                description=""
+                keywords=""
             />
 
             <BreadHero
@@ -28,20 +29,22 @@ const Contact = () => {
 
 
             <SpaceMy>
-                <PageHeading title={'Contact Us'} />
+                <Row>
+                    <Col xs={12} lg={5}>
+                        <PageHeading title={'Contact Us'} />
 
-                <div className={styles.mtDescripInf}>
-                    <Row>
-                        <Col xs={12} md={5}>
-                            <p className={styles.DescripInf}>Lorem ipsum dolor sit amet consectetur. Ullamcorper malesuada vel et id nulla neque tincidunt tortor. Nulla nec vitae quisque eget amet faucibus eget penatibus ipsum</p>
+                        <div className={styles.mtDescripInf}>
+                            <p className={styles.DescripInf}>
+                                Lorem ipsum dolor sit amet consectetur. Ullamcorper malesuada vel et id nulla neque tincidunt tortor. Nulla nec vitae quisque eget amet faucibus eget penatibus ipsum
+                            </p>
 
                             <TimelineStep LinkArray={[
                                 {
-                                    'url': `mailto:travoflies@gmail.com`,
+                                    'url': `mailto:support@travoflies.com`,
                                     'icon': '/images/email-icn.png',
                                     'iconImg': true,
                                     'heading': 'Email Address',
-                                    'content': 'Travoflies@gmail.com',
+                                    'content': 'Support@travoflies.com',
                                 },
                                 {
                                     'url': `tel:+91XXXXXXXXXX`,
@@ -60,13 +63,13 @@ const Contact = () => {
                                         'type': 'lg'
                                     }
                                 ]} />
+                        </div>
 
-                        </Col>
-                        <Col xs={12} md={7}>
-                            gfgf
-                        </Col>
-                    </Row>
-                </div>
+                    </Col>
+                    <Col xs={12} lg={7} className='mt-5 mt-lg-0'>
+                        <ContactUsForm />
+                    </Col>
+                </Row>
             </SpaceMy>
         </>
     )

@@ -18,7 +18,7 @@ export default function Pageerror({ metatitle, title, link, linktext }) {
                 <div className="container py-5">
                     <div className="row justify-content-center">
                         <div className="col-md-12 text-center">
-                            <span className="display-1 d-block font-weight-bold">404</span>
+                            <span className="display-3 d-block font-weight-bold">404</span>
                             <div className={`mb-5 mt-2 lead font-weight-semibold ${styles.fontweBold}`}>{title}</div>
                             <LinkButtonSite path={link}>
                                 {linktext}

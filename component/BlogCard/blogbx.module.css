@@ -4,28 +4,29 @@
     border-radius: 10px;
     border: 1px solid #E7E6E6;
     background: #ffffff;
-    padding: 28px 18px 0;
-        transition: none;
+    padding: 18px 18px 0;
+    transition: none;
     -webkit-transition: none;
     -ms-transition: none;
     -moz-transition: none;
     -o-transition: none;
     position: relative;
     overflow: hidden;
+    z-index: 0;
 }
 
-.ViewMoreBlog::before{
+.ViewMoreBlog::before {
     content: '';
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url('/images/bghover-blog.png'); 
+    background-image: url('/images/bghover-blog.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     left: 0;
     top: 0;
-    z-index: 0; 
+    z-index: 0;
     opacity: 0;
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -33,10 +34,12 @@
     -o-transform: scale(1.2);
     transform: scale(1.2);
 }
+
 .ViewMoreBlog:hover {
-    color: #ffffff; 
+    color: #ffffff;
 }
-.ViewMoreBlog:hover:before{ 
+
+.ViewMoreBlog:hover:before {
     opacity: 1;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -47,23 +50,33 @@
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
 }
+
+.ViewMoreBlog:hover {
+    color: #ffffff;
+}
+
+.ViewMoreBlog.borderTp {
+    border-top: 1px solid #18978F;
+    min-height: 462px;
+}
+
 
 .ReadMore,
 .hrReadMore,
 .postDateMore,
-.abReadMore{
+.abReadMore {
     z-index: 2;
     position: relative;
 }
 
 .ViewMoreBlog:hover .postDateMore,
-.ViewMoreBlog:hover .bxSubs{
+.ViewMoreBlog:hover .bxSubs {
     color: #ffffff;
 }
 
-.ViewMoreBlog:hover .hrReadMore{
+.ViewMoreBlog:hover .hrReadMore {
     border-top-color: rgb(255 255 255 / 32%);
 }
 
@@ -85,28 +98,31 @@
     margin-bottom: 18px;
     text-align: justify;
     max-height: 66px;
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
 }
-.bxSubs::after{
+
+
+.bxSubs::after {
     content: "";
     position: absolute;
     color: #838282;
     right: 0;
     width: 100%;
     text-align: right;
-    bottom: 0; 
+    bottom: 0;
     height: 18px;
-    background: -o-linear-gradient(left,rgb(255 255 255 / 0%) 0,#fff 100%);
-    background: -ms-linear-gradient(left,rgb(255 255 255 / 0%) 0,#fff 100%);
-    background: -moz-linear-gradient(left,rgb(255 255 255 / 0%) 0,#fff 100%);
-    background: -webkit-linear-gradient(left,rgb(255 255 255 / 0%),#fff);
-    background: linear-gradient(90deg,rgb(255 255 255 / 0%) 0,#fff); 
+    background: -o-linear-gradient(left, rgb(255 255 255 / 0%) 0, #fff 100%);
+    background: -ms-linear-gradient(left, rgb(255 255 255 / 0%) 0, #fff 100%);
+    background: -moz-linear-gradient(left, rgb(255 255 255 / 0%) 0, #fff 100%);
+    background: -webkit-linear-gradient(left, rgb(255 255 255 / 0%), #fff);
+    background: linear-gradient(90deg, rgb(255 255 255 / 0%) 0, #fff);
 }
 
-.ViewMoreBlog:hover .bxSubs::after{
-   display: none;
+.ViewMoreBlog:hover .bxSubs::after {
+    display: none;
 }
+
 
 .ReadMore {
     font-size: 14px;
@@ -121,6 +137,8 @@
     margin-top: 20px;
     margin-bottom: 0;
 }
+
+
 
 .postDateMore {
     color: #838282;
@@ -155,6 +173,71 @@
     padding: 0 7.5px 33px;
 }
 
+.imgCoverbg {
+    overflow: hidden;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    padding-top: 50%;
+    position: relative;
+}
+
+.imgCoverbg img {
+    position: absolute;
+    min-width: 1000%;
+    min-height: 1000%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.1);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(0.1);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.1);
+    -o-transform: translateX(-50%) translateY(-50%) scale(0.1);
+    max-width: none;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.ViewMoreBlog:hover .imgCoverbg img {
+    transform: translateX(-50%) translateY(-50%) scale(0.12);
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.12);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(0.12);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.12);
+    -o-transform: translateX(-50%) translateY(-50%) scale(0.12);
+}
+
+
+.ViewMoreBlog.borderTp::before {
+    display: none;
+}
+
+.ViewMoreBlog.borderTp:hover,
+.ViewMoreBlog.borderTp:hover .postDateMore,
+.ViewMoreBlog.borderTp:hover .bxSubs {
+    color: #363535;
+}
+
+.ViewMoreBlog.borderTp:hover .bxTitle {
+    color: #18978F;
+}
+
+.ViewMoreBlog.borderTp .hrReadMore {
+    border-color: #E7E6E6;
+}
+
+.ViewMoreBlog.borderTp:hover .hrReadMore,
+.ViewMoreBlog.borderTp:hover .bxSubs::after {
+    display: block;
+}
+.mbspace{
+    margin-bottom: 40px;
+    min-height: 270px;
+}
+
+
+
 /* responsive */
 @media only screen and (max-width:1299px) {
     .AllBlogRow {
@@ -166,34 +249,44 @@
     }
 }
 
-@media only screen and (max-width:1199px) {}
-
-@media only screen and (max-width:991px) { 
+@media only screen and (max-width:1199px) {
     .bxTitle {
         font-size: 18px;
         line-height: 1.4;
     }
+    
+
+.ViewMoreBlog.borderTp {
+    min-height: 432px;
+}
+}
+
+@media only screen and (max-width:991px) {
     .ViewMoreBlog {
-        padding: 24px 15px 0;
+        padding: 15px 15px 0;
     }
+
     .bxSubs {
         margin-top: 18px;
         margin-bottom: 16px;
-    }
+    } 
 }
 
 @media only screen and (max-width:767px) {
     .AllBlogRow {
-        margin: 0 -5px -12px;
+        margin: 0 -5px -20px;
     }
+
     .AllBlogRow .RoundBlogCol {
-        padding: 0 5px 12px;
-    } 
+        padding: 0 5px 20px;
+    }
+
     .bxTitle {
         font-size: 17px;
     }
+
     .ViewMoreBlog {
-        padding: 20px 14px 0;
+        padding: 14px 14px 0;
     }
 
     .bxSubs {
@@ -204,21 +297,27 @@
 
 @media only screen and (max-width:575px) {
     .AllBlogRow {
-        margin: 0 -7.5px -15px;
+        margin: 0 -7.5px -30px;
     }
 
     .AllBlogRow .RoundBlogCol {
-        padding: 0 7.5px 15px;
+        padding: 0 7.5px 30px;
     }
 
     .bxTitle {
         font-size: 16px;
     }
+
     .ViewMoreBlog {
-        padding: 16px 12px 0;
-    } 
+        padding: 12px 12px 0;
+    }
+
     .ReadMore {
         font-size: 13px;
+    }
+
+    .ViewMoreBlog.borderTp {
+        min-height: 400px;
     }
     .bxSubs {
         font-size: 12px;
@@ -230,6 +329,7 @@
         margin-top: 14px;
         margin-bottom: 12px;
     }
+
     .bxTitle {
         font-size: 16px;
     }

@@ -1,0 +1,115 @@
+.DescripInf {
+    color: #838282;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 14px; 
+}
+
+.DescripInf:last-child {
+    margin-bottom: 0;
+}
+ 
+.mtDescripInf {
+    margin-top: 48px;
+}
+
+.OurPlan {
+    position: relative;
+    display: inline-block;
+}
+
+
+.OurPlan img {
+    position: relative;
+    z-index: 1;
+}
+
+.OurPlanHr {
+    border-color: #E7E6E6;
+    margin: 29px 0 30px
+}
+
+.HappyCustomer {
+    color: #838282;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 47px;
+}
+
+.HappyCustomer b {
+    color: #18978F;
+    font-weight: 600;
+}
+
+
+@media only screen and (min-width:1200px) {
+    .DescripInf {font-size: 15px;}
+}
+
+@media only screen and (max-width:1299px) and (min-width:1200px) {
+    .OurPlan {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width:1199px) and (min-width:992px) {
+    .OurPlan {
+        width: 100%;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    } 
+}
+
+@media only screen and (max-width:1199px) {
+    .HappyCustomer {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .OurPlan {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .OurPlanCenter {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width:767px) {
+    .OurPlanHidden {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .DescripInf {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .mtDescripInf {
+        margin-top: 36px;
+    }
+
+    .OurPlan {
+        width: 100%;
+        max-width: 80%;
+    }
+}
+
+
+@media only screen and (max-width:425px) {
+    .OurPlan {
+        width: 100%;
+        max-width: 85%;
+    }
+}

@@ -10,7 +10,7 @@ class MyDocument extends Document {
           <link rel="icon" href={`/favicon.ico`} type="image/ico" />  
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Lemonada:wght@300;400&display=swap" rel="stylesheet" />
 
           <script dangerouslySetInnerHTML={{
             __html: ``

@@ -1,20 +1,20 @@
  
-import Enginebox from '../component/Enginebox' 
-import Link from "next/link"
 import PageHead from '../component/PageHead';
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { siteid } from '../utils/static';
-import BlogTile from '../component/BlogCard/BlogTile';
+import { siteid } from '../utils/static'; 
+import SpaceMy from '../component/SpaceHoriztal/SpaceMy';
+import RecentBlog from '../component/RecentBlog';
+import AboutDiscoverBx from '../component/AboutDiscover/AboutDiscoverBx';
+import OurServiceBx from '../component/OurService/OurServiceBx';
+import AchieveBx from '../component/Achievements/AchieveBx';
+import Enginebox from '../component/EngineBlock/Enginebox';
 
-export default function Home(props) {
+export default function Home({ allbloglist }) {
   return (
     <>
       <PageHead
-        title=""
-        description=""
-        keywords=""
+        title="Plane Ticket Booking & Get Cheap Flight Deals - Travoflies"
+        description="Plan your next trip via plane and fly with Travoflies to save money on airline tickets. Get useful information about airline policies and update yourself."
+        keywords="Travoflies, Plane Ticket Booking, flight booking, Cheap Flight Deals"
       />
 
 
@@ -22,40 +22,95 @@ export default function Home(props) {
 
         <div className='business-main'>
           <main id="main" className="site-main overflow">
-          <Enginebox />
- 
 
-            {/*-------- latestnews --------*/}
-            <div className="blogs latestnews pb-0 pb-xl-5">
-              <Container className='mb-5 p-0'>
-                <Row>
-                  <Col xs={12} className="mb-4">
-                    <div className='latestnews-area'>
-                      <div className='row align-items-end'>
-                        <div className='col-7'>
-                          <h2 className="latestnews-title text-capitalize">Our Blog</h2>
-                        </div>
-                        <div className='col-5'>
-                          <div className='text-right'>
-                            <Link href="/blog">
-                              <a className="btn-latestnews-readmore text-capitalize">
-                                View more <i className="bi bi-arrow-right ml-1"></i>
-                              </a>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+           {/*---- Engine Box ----*/}
+             <Enginebox />
 
-                    <div className='popular-destination blogaddalist full-w'>
-                      <BlogTile allbloglist={props.allbloglist} showitem={4} path={`blog`} readmore={`Read more`} noitem={`No items found !`} admintext={`Travoflies`} />
-                    </div>
-                  </Col>
+            {/*---- About US ----*/}
+            <AboutDiscoverBx
+              ThumbnailPath="/images/aboutHome.png"
+              Heading="About us"
+              ContentOne="Lorem ipsum dolor sit amet consectetur. Nisi ut massa id dignissim ullamcorper maecenas massa. Phasellus mi egestas egestas sit. Mi lacus lacus arcu interdum tristique proin. Fringilla suscipit risus elit vehicula. Vestibulum id sit sed nisl leo volutpat viverra. Proin in quam faucibus eget ut elementum. Aliquam nisl ipsum elementum massa imperdiet in viverra sollicitudin tellus. Viverra sed ridiculus dolor sit cursus a pellentesque commodo.Viverra sed ridiculus dolor sit cursus a pellentesque commodo."
+              ContentTwo=""
+              Discover={{
+                'url': '/about-us',
+                'title': 'Discover more'
+              }}
+              HappyCustomer={{
+                'number': 500,
+                'title': 'Happy Customer'
+              }}
+            />
 
-                </Row>
-              </Container>
-            </div>
-            {/*-------- end latestnews --------*/}
+
+            {/*---- OurService ----*/}
+            <OurServiceBx
+              title="Our Services"
+              Services={[
+                {
+                  'title': 'International hotel reservation.',
+                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
+                },
+                {
+                  'title': 'Reservation of international plane.',
+                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
+                },
+                {
+                  'title': 'Hotel reservation for a group.',
+                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
+                },
+                {
+                  'title': 'Special offers for  couples.',
+                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
+                },
+                {
+                  'title': 'Book flights at affordable prices..',
+                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
+                },
+                {
+                  'title': 'Custom packages.',
+                  'content': 'Lorem ipsum dolor sit amet consectetur. Eget nulla nisi feugiat a imperdiet tristique curabitur ac morbi. a imperdiet tristique curabitur ac morbi.'
+                },
+              ]}
+            />
+            
+
+            <AchieveBx  Achievements={[
+                {
+                  'number': 89,
+                  'content': 'Total Destination'
+                },
+                {
+                  'number': 1190,
+                  'content': 'Flight Booking'
+                },
+                {
+                  'number': 3000,
+                  'content': 'Happy People'
+                },
+                {
+                  'number': 1000,
+                  'content': 'Hotel Reservation'
+                },
+              ]}/>
+
+
+            {/*---- latest news ----*/}
+            <SpaceMy>
+              <RecentBlog
+                recentitem={allbloglist}
+                path={`blogs`}
+                title={`Latest Blogs`}
+                searchtext={`Search Blog`}
+                viewcontent={`View All`}
+                readmore={`Read more`}
+                noitem={`No items found !`}
+                admintext={`Travel`}
+                showitem={6}
+                Thumbnail={true}
+                RecentBlog={true}
+              />
+            </SpaceMy>
 
 
           </main>
@@ -108,10 +163,7 @@ export const getStaticProps = async ({ params }) => {
   const json = await res.json()
   return {
     props: { allbloglist: json.response },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 seconds
-    revalidate: 60, // In seconds
+    revalidate: 10
   }
 }
 

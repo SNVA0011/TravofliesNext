@@ -1,0 +1,146 @@
+.EngineboxArea {
+   background: url('/images/wave-background.png') #e6fcfd;
+   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.14);
+   padding-top: 129px;
+   padding-bottom: 44px;
+   background-repeat: repeat-x;
+   background-position: bottom center;
+}
+
+.EngineboxArea h1 {
+   font-size: 65px;
+   font-weight: 700;
+   margin-bottom: 50px;
+}
+
+.EngineboxArea h1 span {
+   color: #18978f;
+   position: relative;
+   display: inline-block;
+   font-family: "Lemonada", sans-serif;
+}
+
+.EngineboxArea h1 span img {
+   position: absolute;
+   margin-left: 42px;
+   top: 100%;
+   max-width: none;
+   left: 0;
+   margin-top: 10px;
+}
+
+
+.AirplaneRight {
+   position: absolute;
+}
+
+.ExploreMore {
+   color: #838282;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 1.4;
+   margin-bottom: 0;
+}
+.ExploreAmz{
+   font-family: "Lemonada", sans-serif;
+   color: #18978f;
+   font-weight: 500; 
+   font-size: 13px;
+   margin-bottom: 5px;
+}
+
+/* responsive */
+@media only screen and (max-width:1499px) {
+   .EngineboxArea h1 {
+      font-size: 55px;
+   }
+}
+
+@media only screen and (max-width:1299px) {
+   .EngineboxArea h1 {
+      font-size: 50px;
+   }
+}
+
+@media only screen and (max-width:1199px) {
+   .EngineboxArea h1 {
+      font-size: 45px;
+   }
+
+   .EngineboxArea h1 span img {
+      width: 150px;
+      margin-left: 30px;
+   }
+}
+
+@media only screen and (max-width:991px) {
+   .EngineboxArea h1 {
+      font-size: 36px;
+      line-height: 1.4;
+   }
+
+   .EngineboxArea h1 span img {
+      width: 130px;
+      margin-left: 25px;
+   } 
+   .ExplorPlx{
+      width: 100%;
+      max-width: 400px;
+   }
+   .ExploreMore {
+      font-size: 16px;
+   }
+}
+
+@media only screen and (max-width:767px) {
+   .EngineboxArea h1 {
+      font-size: 35px;
+   }
+   .ExploreAmz{
+      font-size: 12px;
+   }
+   
+   .EngineboxArea {
+      text-align: center;
+   }
+
+   .EngineboxArea h1 span img {
+      width: 100px;
+      margin-left: 20px;
+   }
+   .EngineboxArea h1 {
+      margin-bottom: 40px;
+   }
+ 
+}
+
+@media only screen and (max-width:575px) {
+   .EngineboxArea h1 {
+      font-size: 30px;
+   }
+   .ExploreMore {
+      font-size: 15px;
+   }
+   .EngineboxArea{
+      padding-left: 12px;
+      padding-right: 12px;
+   }
+   .ExplorPlx{
+      width: 100%;
+      max-width: 90%;
+   }
+   .EngineboxArea {
+padding-bottom: 50px;
+   }
+}
+
+@media only screen and (max-width:425px) {
+   .EngineboxArea h1 {
+      font-size: 25px;
+   }
+   .ExploreMore {
+      font-size: 16px; 
+      line-height: 1.5;
+   } 
+}

@@ -27,7 +27,9 @@
     -moz-box-shadow: 0 3px 4px 0 rgba(0,0,0,.04);
     -ms-box-shadow: 0 3px 4px 0 rgba(0,0,0,.04);
     -o-box-shadow: 0 3px 4px 0 rgba(0,0,0,.04); 
+
 }
+
 @-webkit-keyframes slideInDownhd {
   0% {
     -webkit-transform: translateY(-100%);
@@ -66,8 +68,7 @@
     font-weight: 500;
     line-height: normal;
     position: relative;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding:10px 4px; 
     min-width: 68px;
     text-align: center;
 }
@@ -127,26 +128,36 @@
     top: -3px;
 }
 
+.StickyHeader.HomeHeader .NavbarPicTwo,
+.HomeHeader .NavbarPicTwo,
 .StickyHeader .NavbarPicTwo,
 .NavbarPicOne{
     display: none;
 }
+
+ 
+.HomeHeader .NavbarPicOne,
 .StickyHeader .NavbarPicOne{
     display: inline-block;
 }
 
+.HomeHeader .NavbarMain .NavbarNav .NavbarLink,
 .StickyHeader .NavbarMain .NavbarNav .NavbarLink{
     color: #3A3A3A;
-}
+} 
+.HomeHeader .NavbarMain .NavbarNav .NavbarLink:active,
+.HomeHeader .NavbarMain .NavbarNav .NavbarLink:hover,
 .StickyHeader .NavbarMain .NavbarNav .NavbarLink:active,
 .StickyHeader .NavbarMain .NavbarNav .NavbarLink:hover{
    color: #feb139
 }
 
+.HomeHeader .NavbarMain .NavbarNav .NavbarLink:focus,
 .StickyHeader .NavbarMain .NavbarNav .NavbarLink:focus{
 color:  #18978F;
 }
 
+.HomeHeader .NavbarMain .NavbarNav .NavbarLink::after,
 .StickyHeader .NavbarMain .NavbarNav .NavbarLink::after{
 background-color: #18978F;
 }
@@ -155,8 +166,9 @@ background-color: #18978F;
   background: transparent;
   display: none;
   position: relative;
-  top: 4px;
+  top: 4px; 
 }
+ 
 .StickyHeader .NavToggle{
     top: 1px; 
 }
@@ -173,7 +185,7 @@ background-color: #18978F;
     cursor: pointer;
   }
   
- 
+
   .NavToggle .MenuItem {
     transition: all 0.3s cubic-bezier(.4,0,.2,1);
     -webkit-transition: all 0.3s cubic-bezier(.4,0,.2,1);
@@ -187,6 +199,12 @@ background-color: #18978F;
     background: #ffffff;
     border-radius: 10px;
   } 
+
+  .StickyHeader.HomeHeader .NavToggle .MenuItem,
+  .HomeHeader .NavToggle .MenuItem{
+    background: #3A3A3A;
+  }
+ 
   .MenuItem.ActiveOne{
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -215,7 +233,7 @@ width: 0;
   }
 
   .offcanvasBackdrop{
-    background-color: rgb(0 0 0 / 50%);
+    background: -webkit-gradient(linear,  left top, left bottom,  from(rgba(255,255,255,1)),to(rgba(255,255,255,0.7)));background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.7) 100%);background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.7) 100%);background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.7) 100%);background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.7) 100%);
     height: 100%;
     left: 0;
     position: fixed;
@@ -224,8 +242,8 @@ width: 0;
     z-index: 2;
     -webkit-animation-name: fadeInBckdrop;
     animation-name: fadeInBckdrop;
-    -webkit-animation-duration: 600ms;
-    animation-duration: 600ms;
+    -webkit-animation-duration: 300ms;
+    animation-duration: 300ms;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -ms-backdrop-filter: blur(4px);
@@ -242,7 +260,10 @@ width: 0;
     0% {opacity: 0;}
     100% {opacity: 1;}
     } 
-
+ 
+    .offcanvasBackdrop.Other{
+        background: rgb(0 0 0 / 50%);
+    }
 
 /* responsive */
 @media only screen and (max-width:1199px) {
@@ -280,8 +301,8 @@ width: 0;
     .NavbarItem{
         margin-left: 0;
         border-bottom: 1px solid #f3f3f3;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }  
     .NavbarItem:last-child{
         border-bottom: 0;
@@ -305,23 +326,25 @@ width: 0;
         width: 100%;
         background-color: #ffffff;
         max-width: 540px;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-                border-radius: 6px;
-        box-shadow:0 3px 94px 0 rgb(0 0 0 / 10%);
-        -webkit-box-shadow:0 3px 94px 0 rgb(0 0 0 / 10%);
-        -moz-box-shadow:0 3px 94px 0 rgb(0 0 0 / 10%);
-        -ms-box-shadow:0 3px 94px 0 rgb(0 0 0 / 10%);
-        -o-box-shadow:0 3px 94px 0 rgb(0 0 0 / 10%);
-        margin-top: 7px; 
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+                border-radius: 0; 
+        margin-top: 0; 
         padding: 2px 0;
     }
-
+    .NavbarColp.Other{
+        -webkit-border-radius: 0 0 8px 8px;
+        -moz-border-radius: 0 0 8px 8px;
+                border-radius: 0 0 8px 8px;  
+    }
     
     .NavbarMain .NavbarNav .NavbarLink::after {
         max-width: 60px;
         margin-top: 6px;
         background-color: #18978F;
+    }
+    .siteHeader.StickyHeader{
+        border-radius: 0 0 8px 8px;
     }
 } 
 @media only screen and (max-width:575px) { 

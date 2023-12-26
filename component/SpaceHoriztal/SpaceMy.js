@@ -3,10 +3,10 @@ import React, { Children } from 'react'
 import Container from 'react-bootstrap/Container'
 import styles from "./common.module.css"
 
-export default function SpaceMy({children, bottomSpczero, bgYellow}) { 
+export default function SpaceMy({children, bottomSpczero, bgYellow, bgWhiteChoose}) { 
     return (
-        <section className={`${styles.spaceTopbottom} ${bottomSpczero ? 'pb-0': ''} ${bgYellow ? styles.bgYellow : ''} `}>
-            <Container className={bottomSpczero ? 'px-0' : ''}>
+        <section className={`${styles.spaceTopbottom} ${bottomSpczero ? 'pb-0': ''} ${bgYellow ? styles.bgYellow : ''} ${bgWhiteChoose ? styles.bgWhiteChoose : ''} `}>
+            <Container className={`${bottomSpczero ? 'px-0' : ''} ${bgWhiteChoose ? styles.ContainerChoose : ''}`}>
                 {children}
             </Container>
         </section>

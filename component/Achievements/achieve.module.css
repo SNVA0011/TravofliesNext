@@ -1,0 +1,144 @@
+.AchievementsBx .AchievContainer {
+   border-radius: 12px;
+   background: #18978F;
+   box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.16);
+   color: #ffffff;
+   padding-top: 45px;
+   padding-bottom: 45px;
+   text-align: center;
+   overflow: hidden;
+   margin-top: -80px;
+}
+
+.AchievementsBx h5,
+.AchievementsBx p {
+   line-height: normal;
+   font-style: normal;
+   font-size: 24px;
+}
+
+.AchievementsBx h5 {
+   font-family: "Lemonada", sans-serif;
+   font-weight: 400;
+   margin-bottom: 8px;
+}
+
+.AchievementsBx p {
+   -webkit-transform: skewX(-8deg);
+   -moz-transform: skewX(-8deg);
+   -ms-transform: skewX(-8deg);
+   -o-transform: skewX(-8deg);
+   transform: skewX(-8deg);
+   font-weight: 500;
+   margin-bottom: 0;
+   font-weight: 600;
+}
+
+.AchievementsBox {
+   border-right: solid 2px #21a39a;
+   padding-top: 7px;
+   padding-bottom: 19px;
+}
+
+.AchievementRow {
+   margin-right: -17px;
+}
+
+/* responsive */
+@media only screen and (min-width:1250px) {
+   .AchievementsBx .AchievContainer {
+      max-width: 996px;
+   }
+}
+
+@media only screen and (max-width:1249px) {
+
+   .AchievementsBx h5,
+   .AchievementsBx p {
+      font-size: 22px;
+   }
+}
+
+@media only screen and (max-width:1199px) {
+
+   .AchievementsBx h5,
+   .AchievementsBx p {
+      font-size: 20px;
+   }
+
+}
+
+@media only screen and (max-width:991px) {
+   .AchievementsBx .AchievContainer {
+      margin-top: -70px;
+   }
+
+   .AchievementsBox {
+      border-bottom: solid 1px #21a39a;
+      border-width: 1px;
+      padding-top: 25px;
+      padding-bottom: 34px;
+   }
+
+   .AchievementRow {
+      margin-bottom: -1px;
+      margin-right: -16px;
+   }
+
+   .AchievementsBx .AchievContainer {
+      padding-top: 0;
+      padding-bottom: 0;
+   }
+}
+
+@media only screen and (max-width:767px) {
+   .AchievementsBx .AchievContainer {
+      margin-top: -60px;
+   }
+
+   .AchievementsBx h5,
+   .AchievementsBx p {
+      font-size: 18px;
+   } 
+}
+
+@media only screen and (max-width:575px) {
+   .AchievementsBx .AchievContainer {
+      margin-top: -50px;
+   }
+
+   .AchievementsBx {
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+
+   .AchievementRow {
+      margin-left: -14px;
+      margin-right: -15px;
+   }
+
+   .AchievementsBox {
+      padding-left: 8px;
+      padding-right: 8px;
+   }
+}
+
+@media only screen and (max-width:425px) {
+   .AchievementsBx h5 {
+      font-size: 16px;
+   }
+
+   .AchievementsBx p {
+      font-size: 15px;
+   }
+
+   .AchievementsBx p {
+      max-width: 90px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   
+   .AchievementsBx h5 {
+      margin-bottom: 6px;
+   }
+}

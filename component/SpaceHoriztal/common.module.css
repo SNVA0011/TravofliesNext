@@ -1,28 +1,68 @@
-.spaceTopbottom{
+.spaceTopbottom {
     padding-top: 80px;
     padding-bottom: 80px;
-}  
-.bgYellow{
+}
+
+.bgYellow {
     background-color: #F9F4F0;
     background-image: url('/images/bg-yellowwave.png');
     background-repeat: no-repeat;
     background-position: left top 9px;
 }
+
+.bgWhiteChoose {
+    background-color: #ffffff;
+    background-image: url('/images/whychoose-leftwv.png'), url('/images/whychoose-rightwv.png');
+    background-repeat: no-repeat;
+    background-position: left top 62px, bottom 62px right;
+    position: relative;
+}
+
+.bgWhiteChoose::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 55%);
+} 
+.bgWhiteChoose .ContainerChoose{
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (max-width:1056px) {
+    .ContainerChoose {
+        max-width: 1026px;
+    }
+}
+
 @media only screen and (max-width:991px) {
-    .spaceTopbottom{
+    .spaceTopbottom {
         padding-top: 70px;
         padding-bottom: 70px;
+    }
+    .bgWhiteChoose{
+        background-size: 200px, 450px;
+        background-position: left top 30px, bottom 30px right;
     } 
 }
+
 @media only screen and (max-width:767px) {
-    .spaceTopbottom{
+    .spaceTopbottom {
         padding-top: 60px;
         padding-bottom: 60px;
+    }
+    .bgWhiteChoose{
+        background-size: 150px, 350px;
+        background-position: left top 0, bottom 0 right;
     } 
 }
+
 @media only screen and (max-width:575px) {
-    .spaceTopbottom{
+    .spaceTopbottom {
         padding-top: 50px;
         padding-bottom: 50px;
-    } 
+    }
 }

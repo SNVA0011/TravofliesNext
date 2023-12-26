@@ -28,6 +28,7 @@ export const PageStaicJson = (page) => {
                 'Placeholder': 'Enter your email',
                 'BtnText': 'Subscribe',
             },
+            'HomeEng': '/',
             'Info': 'While planning a trip to your favorite destination, multiple things must be considered so that you can easily travel with them by making the related booking. And at Travvoflies',
             'QuickLinks' : {
                 'heading':'Quick Links',
@@ -63,15 +64,15 @@ export const PageStaicJson = (page) => {
                     },
                     {
                         'title': 'Sitemap',
-                        'url': '#!'
+                        'url': '/#!'
                     },
                     {
                         'title': 'Privacy Policy',
-                        'url': '#!'
+                        'url': '/#!'
                     },
                     {
                         'title': 'Terms & Conditions',
-                        'url': '#!'
+                        'url': '/#!'
                     } 
                 ]
             },
@@ -97,34 +98,25 @@ export const PageStaicJson = (page) => {
                 'Social' :  [
                     {
                         'icon': 'facebook-footer.png',
-                        'url': '#!'
+                        'url': '/#'
                     },
                     {
                         'icon': 'twitter-footer.png',
-                        'url': '#!'
+                        'url': '/#'
                     },
                     {
                         'icon': 'instragram-footer.png',
-                        'url': '#!'
+                        'url': '/#'
                     },
                     {
                         'icon': 'youtube-footer.png',
-                        'url': '#!'
+                        'url': '/#'
                     } 
                 ]
             },
             'Copyright': `Copyright ${new Date().getFullYear()}-${new Date().getFullYear() + 1} | All Rights Reserved by Travoflies.com`
         }
-        );
-        case 'es': return (
-            {
-            }
-        );
-        default: return (
-            {
-
-            }
-        );
+        )
     }
 }
 

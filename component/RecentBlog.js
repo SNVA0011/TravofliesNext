@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from "next/router";
 import BlogTile from './BlogCard/BlogTile';
 import PageHeading from './HeadingStyle/PageHeading';
-import LinkButtonSite from './ButtonSite/LinkButtonSite';
+import LinkButtonSite from './ButtonSite/LinkButtonSite'; 
 
 
-const RecentBlog = ({ recentitem, path, title, viewcontent, readmore, noitem, admintext }) => {
+const RecentBlog = ({ recentitem, path, title, viewcontent, readmore, noitem, admintext ,showitem, Thumbnail, RecentBlog}) => {
     const location = useRouter();
 
     const [blogName, setblogName] = useState("");
@@ -22,23 +22,27 @@ const RecentBlog = ({ recentitem, path, title, viewcontent, readmore, noitem, ad
     }, [location.asPath]);
 
 
+
+
     return (
         <>
             <aside className="recent-blogsalide position-relative bx-2">
                 <div className="text-center">
                     <PageHeading title={title} />
 
-                    <div className='mt-58 mb-4 text-left'>
+                    <div className={`${RecentBlog ? '': 'mt-58'} text-left`}> 
                         <BlogTile
                             allbloglist={recentitem}
                             path={path}
                             readmore={readmore}
                             noitem={noitem}
                             admintext={admintext}
-                            showitem={6} />
+                            showitem={showitem}
+                            Thumbnail={Thumbnail}
+                            RecentBlog={RecentBlog} />
                     </div>
                                         
-                    <div className='mt-35 clearfix'>
+                    <div className={`mt-35 clearfix`}>
                         <LinkButtonSite path={`/${path}`}>
                             {viewcontent}
                         </LinkButtonSite>

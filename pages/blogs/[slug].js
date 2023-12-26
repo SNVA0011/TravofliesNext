@@ -89,6 +89,8 @@ export default function blogDetails({ singleblog, allblog }) {
               readmore={`Read more`}
               noitem={`No items found !`}
               admintext={`Travel`}
+              showitem={6}
+              RecentBlog={true}
             />
           </SpaceMy>
 
@@ -185,40 +187,14 @@ export async function getStaticProps(context) {
     requestOptions
   );
   const multiplejson = await resall.json();
-
-
-  // All Comments  
-  var requestComment = {
-    method: "POST",
-    body: JSON.stringify({
-      "reviewId": "",
-      "userName": "",
-      "userEmail": "",
-      "userPhone": "",
-      "reviewMessage": "",
-      "reviewDate": "",
-      "reviewRating": "",
-      "reviewRpyId": "",
-      "reviewStatus": "",
-      "siteId": siteid,
-      "reviewUrl": `${params.slug}`
-    }),
-    redirect: "follow",
-    headers: { 'Content-type': 'application/json; charset=UTF-8' }
-  };
-  const commentall = await fetch(
-    "https://cms.travomint.com/travoles-content/reviewbyurl?authcode=Trav3103s987876",
-    requestComment
-  );
-  const commentjson = await commentall.json();
+ 
 
   return {
     props: {
       singleblog: onejson.response,
-      allblog: multiplejson.response,
-      getallcomments: commentjson.response,
-    },
-    revalidate: 60,
+      allblog: multiplejson.response, 
+    }, 
+    revalidate: 10 
   };
 }
 

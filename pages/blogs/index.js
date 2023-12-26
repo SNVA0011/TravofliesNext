@@ -29,8 +29,7 @@ export default function Blog({ allbloglist }) {
       <SpaceMy>
         <div className='text-center'>
           <PageHeading title={'All Blogs'} />
-        </div>
-
+        </div> 
         <SpaceMy bottomSpczero={true}>
           <BlogTile allbloglist={allbloglist} path={`blogs`} readmore={`Read more`} noitem={`No items found !`} admintext={`Travel`} />
         </SpaceMy>
@@ -78,10 +77,7 @@ export const getStaticProps = async ({ params }) => {
   const json = await res.json()
   return {
     props: { allbloglist: json.response },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 seconds
-    revalidate: 60, // In seconds
+    revalidate: 10 
   }
 }
 

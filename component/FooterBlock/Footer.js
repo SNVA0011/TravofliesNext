@@ -21,7 +21,9 @@ export default function Footer() {
               <div className={`input-group  d-flex align-items-center ${styles.SubsNewsletter}`}>
                 <div className={`flex-grow-1 d-flex align-items-center ${styles.SubsNewsFlex}`}>
                   <span className={styles.SubsNewsAddon}>
-                    <img src="/images/user-ico.png" alt="user-icon" />
+                    <a>
+                      <img src="/images/user-ico.png" alt="user-icon" />
+                    </a>
                   </span>
                   <input type="text" className={`form-control ${styles.Subsgt}`} placeholder={Footer.Newsletter.Placeholder} />
                 </div>
@@ -38,7 +40,12 @@ export default function Footer() {
             <Row>
               <Col xs={12} xl={5}>
                 <div className={styles.desCription}>
-                  <img src="/images/travoflies-logo.png" alt="travoflies-logo" /><br></br>
+                  <Link href={Footer.HomeEng}>
+                    <a>
+                      <img src="/images/travoflies-logo.png" alt="travoflies-logo" />
+                    </a>
+                  </Link> 
+                  <br></br>
                   <p>{Footer.Info}</p>
                 </div>
               </Col>

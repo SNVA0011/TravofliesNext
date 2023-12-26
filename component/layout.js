@@ -1,13 +1,17 @@
- 
+
+import { useRouter } from 'next/router'
 import Footer from './FooterBlock/Footer'
 import Header from './HeaderBlock/Header'
 
-export default function Layout({ children}) { 
+export default function Layout({ children }) {
+    const router = useRouter()
+    const ErrorPage = router.pathname !== '/_error'
+
     return (
         <>
-            <Header/> 
-            <>{children}</> 
-            <Footer />
+            {ErrorPage && <Header />}
+            <>{children}</>
+            {ErrorPage && <Footer />}
         </>
     )
 }

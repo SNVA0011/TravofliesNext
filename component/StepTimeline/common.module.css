@@ -11,11 +11,14 @@
 
 .FlexListRow::before {
     content: '';
-    border-left: dashed 2px #e7e7e7;
+    background-image: url('/images/darkline.png');
     height: 100%;
     position: absolute;
     top: 0;
-    left: 30px;
+    width: 3px;
+    left: 29px;
+    background-repeat: repeat-y;
+    background-position: center
 }
 
 .FlexListRow:last-child::before {
@@ -56,13 +59,19 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
     border-radius: 50%;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     background-color: #ffffff;
     color: #18978F;
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
     text-align: center;
+}
+.iconRound.whyChooseList{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #fff9f2;
 }
 
 .iconRound img {
@@ -93,8 +102,7 @@
 .StepTextTwo {
     font-style: normal;
     font-weight: 400;
-    line-height: 1.85; 
-    text-align: justify;
+    line-height: 1.85;  
 }
 
 .StepTextOne {
@@ -109,6 +117,13 @@
 }
 
 /* responsive */
+@media only screen and (min-width:1200px) {
+    .iconRound.AboutPage{
+        min-width: 69px;
+        width: 69px;
+        height: 69px;
+    }
+}
 @media only screen and (max-width:1499px) {
     .FlexGrow {
         padding-left: 30px;
@@ -139,7 +154,7 @@
         padding-top: 8px;
     } 
     .FlexListRow::before{
-        left: 27px;
+        left: 26px;
     }
     .iconRound {
         width: 55px;
@@ -172,7 +187,7 @@
         font-size: 16px;
     }
     .FlexListRow::before{
-        left: 23px;
+        left: 22px;
     }
     .FlexListRow{
         padding-bottom: 34px;
@@ -200,7 +215,7 @@
     padding-top: 6px;
 }
 .FlexListRow::before{
-    left: 21px;
+    left: 20px;
 }
 .iconRound {
     width: 45px;

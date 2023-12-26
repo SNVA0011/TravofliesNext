@@ -1,0 +1,103 @@
+.DescripInf {
+    color: #838282;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 27px;
+}
+
+.mtDescripInf {
+    margin-top: 44px;
+}
+
+.OurStory {
+    position: relative;
+    display: inline-block;
+}
+
+.OurStory::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    background: #FAEAD2;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.OurStory img {
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (max-width:1299px) and (min-width:1200px) {
+    .OurStory {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width:1199px) and (min-width:992px) {
+    .OurStory {
+        width: 100%;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .OurStory {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .OurStoryCenter {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .OurStoryHidden {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .DescripInf {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .mtDescripInf {
+        margin-top: 36px;
+    }
+
+    .OurStory {
+        width: 100%;
+        max-width: 70%;
+    }
+}
+
+
+@media only screen and (max-width:425px) {
+    .OurStory {
+        width: 100%;
+        max-width: 80%;
+    }
+}

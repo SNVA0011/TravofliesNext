@@ -1,7 +1,7 @@
 .breadcrumbSite {
     background-image: url('/images/beach-background.png');
     background-color: #000000;
-    background-position: top center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 437px;
