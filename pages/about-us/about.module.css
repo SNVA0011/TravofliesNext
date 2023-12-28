@@ -42,35 +42,7 @@
 .OurStory img {
     position: relative;
     z-index: 1;
-}
-
-.DescripInf.DescripInfImg {
-    margin-left: -6px;
-    margin-right: -6px;
-    margin-top: 28px;
-    margin-bottom: 0;
-}
-
-.DescripInfImgMb {
-    padding-left: 6px;
-    padding-right: 6px;
-}
-
-.DescripInfImg img {
-    width: 22px;
-    min-width: 22px;
-    margin-right: 12px;
-    position: relative;
-    top: 1px;
-}
-
-.DescripInfImg .ColRoundBx {
-    border-radius: 15px;
-    padding: 15px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
-}
+} 
 
 .ServiceOff {
     color: #18978f;
@@ -147,14 +119,7 @@
     .OurStory {
         width: 100%;
         max-width: 70%;
-    }
-
-    .DescripInfImg img {
-        width: 22px;
-        min-width: 22px;
-        margin-right: 10px;
-    }
-
+    } 
     .ServiceOff {
         font-size: 18px;
     }

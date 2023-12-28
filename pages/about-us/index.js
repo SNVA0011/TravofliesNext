@@ -7,6 +7,7 @@ import AchieveBx from '../../component/Achievements/AchieveBx';
 import { Col, Row } from 'react-bootstrap'
 import TimelineStep from '../../component/StepTimeline/TimelineStep'
 import styles from "./about.module.css"
+import OurServiceBx from '../../component/OurService/OurServiceBx'
 
 
 const Aboutus = () => {
@@ -49,10 +50,11 @@ const Aboutus = () => {
 
                     </Col>
 
-
-                    <Col xs={12} lg={5}>
-                        <div className='text-left mt-4 pt-2'>
-                            <TimelineStep AboutPage={true}
+                    <Col xs={12}>
+                        <div className='text-left mt-4 mt-xl-5 pt-xl-3'>
+                            <TimelineStep 
+                            Horizontal={true}
+                            AboutPage={true}
                                 ContentArray={[
                                     {
                                         'icon': '1',
@@ -77,58 +79,45 @@ const Aboutus = () => {
                                     },
                                 ]} />
                         </div>
-                    </Col>
-
-
-                   <Col xs={12} lg={7} className='pl-lg-4 pl-xl-5'>
-                        <h4 className={styles.ServiceOff}>Services offered by us:</h4>
-                        <p className={styles.DescripInf}>
-                            Travoflies works to create a seamless travel experience. As part of the same, there are varied services that get extended by them, which are as stated here:
-                        </p>
-
-                        <Row className={`${styles.DescripInf} ${styles.DescripInfImg}`}>
-                            <Col xs={12} sm={6} className={`mb-3 ${styles.DescripInfImgMb}`}>
-                                <div className={`d-flex align-items-start flex-column align-items-start justify-content-start ${styles.ColRoundBx}`}>
-                                   <div className='d-flex align-items-start my-auto'> <img src='/images/correct-tic.png' alt='tic' /> Trustworthy expert guidance with 24/7 availability.</div>
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} className={`mb-3 ${styles.DescripInfImgMb}`}>
-                                <div className={`d-flex align-items-start flex-column align-items-start justify-content-start ${styles.ColRoundBx}`}>
-                                   <div className='d-flex align-items-start my-auto'> <img src='/images/correct-tic.png' alt='tic' /> Multi-city itinerary selection and reservations.</div>
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} className={`mb-3 ${styles.DescripInfImgMb}`}>
-                                <div className={`d-flex align-items-start flex-column align-items-start justify-content-start ${styles.ColRoundBx}`}>
-                                    <div className='d-flex align-items-start my-auto'><img src='/images/correct-tic.png' alt='tic' /> Budget-friendly deals and discounts.</div>
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} className={`mb-3 ${styles.DescripInfImgMb}`}>
-                                <div className={`d-flex align-items-start flex-column align-items-start justify-content-start ${styles.ColRoundBx}`}>
-                                   <div className='d-flex align-items-start my-auto'> <img src='/images/correct-tic.png' alt='tic' /> Customization of the travel package chosen.</div>
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} className={`mb-3 ${styles.DescripInfImgMb}`}>
-                                <div className={`d-flex align-items-start flex-column align-items-start justify-content-start ${styles.ColRoundBx}`}>
-                                   <div className='d-flex align-items-start my-auto'> <img src='/images/correct-tic.png' alt='tic' /> Upgrades, flight changes, and cancellations are necessary.</div>
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} className={`mb-3 ${styles.DescripInfImgMb}`}>
-                                <div className={`d-flex align-items-start flex-column align-items-start justify-content-start ${styles.ColRoundBx}`}>
-                                    <div className='d-flex align-items-start my-auto'><img src='/images/correct-tic.png' alt='tic' /> A specific team is available to take up Special assistance requested.</div>
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} className={`mb-3 ${styles.DescripInfImgMb}`}>
-                                <div className={`d-flex align-items-start flex-column align-items-start justify-content-start ${styles.ColRoundBx}`}>
-                                    <div className='d-flex align-items-start my-auto'><img src='/images/correct-tic.png' alt='tic' /> Easy group booking process and offers on it.</div>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Col>
- 
-
+                    </Col> 
                 </Row>
             </SpaceMy>
 
+
+            <OurServiceBx
+                title="Services Offered by Us"
+                subtitle="Travoflies works to create a seamless travel experience. As part of the same, there are varied services that get extended by them, which are as stated here"
+                Services={[
+                    {
+                        title: '24/7 availability',
+                        content: 'Trustworthy expert guidance with 24/7 availability.'
+                    },
+                    {
+                        title: 'Selection and reservations',
+                        content: 'Multi-city itinerary selection and reservations.'
+                    },
+                    {
+                        title: 'Deals and discounts',
+                        content: 'Budget-friendly deals and discounts.'
+                    },
+                    {
+                        title: 'Travel package',
+                        content: 'Customization of the travel package chosen.'
+                    },
+                    {
+                        title: 'Upgrades & Cancellations',
+                        content: 'Upgrades, flight changes, and cancellations are necessary.'
+                    },
+                    {
+                        title: 'Specific team',
+                        content: 'A specific team is available to take up Special assistance requested.'
+                    },
+                    {
+                        title: 'Group booking',
+                        content: 'Easy group booking process and offers on it.'
+                    },
+                ]}
+            />
 
             {/*---- Why Choose Us ----*/}
             <AchieveBx Achievements={[
@@ -160,7 +149,7 @@ const Aboutus = () => {
                     <Row className='align-items-lg-center flex-row-reverse'>
                         <Col xs={12} sm={5} md={4} xl={6} className={`text-center`}>
                             <img src='/images/routed-about.png' alt='Why Choose Us' />
-                        </Col> 
+                        </Col>
                         <Col xs={12} sm={7} md={8} xl={6} className={`mt-4 mt-sm-0 ${styles.OurStoryCenter}`}>
                             <div className='text-left'>
                                 <TimelineStep AboutPage={true} whyChooseList={true} ContentArray={[

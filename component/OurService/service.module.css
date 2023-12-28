@@ -1,0 +1,100 @@
+ .OurServiceBx {
+    width: 100%; 
+    text-align: center;
+ }
+
+ .ServicesRow {
+    margin-bottom: -60px;
+ }
+
+ .ServicesBox {
+    margin-bottom: 60px;
+ }
+
+ .ServicesBox hr {
+    border: none;
+    height: 2px;
+    margin: 18px 0;
+    background-image: url('/images/line-service.png');
+    background-repeat: repeat-x;
+    background-position: top left;
+    opacity: 0.35;
+ }
+
+ .ServicesBox h5,
+ .ServicesBox p {
+    color: #363535;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f4f0;
+ }
+
+ .ServicesBox h5 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0;
+ }
+
+ .ServicesBox p { 
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 0; 
+ }
+
+ /* responsive */ 
+
+ @media only screen and (max-width:1199px) {
+    .ServicesBox hr {
+       margin: 16px 0;
+    }
+
+    .ServicesBox h5 {
+       font-size: 18px;
+    } 
+ }
+
+ @media only screen and (max-width:991px) {
+    .ServicesBox hr {
+       margin: 14px 0;
+    }
+
+    .ServicesBox h5 {
+       font-size: 17px;
+    }
+    .ServicesRow {
+      margin-bottom: -50px;
+   }
+  
+   .ServicesBox {
+      margin-bottom: 50px;
+   }
+  
+  
+ }
+
+ @media only screen and (max-width:575px) { 
+   .ServicesBox{
+      padding-left: 25px;
+      padding-right: 25px;
+   }
+    .ServicesBox,
+    .ServicesBox p {
+       text-align: center;
+    }
+
+    .ServicesBox p {
+       font-size: 13px;
+    } 
+    .ServicesRow {
+      margin-bottom: -45px;
+   }
+  
+   .ServicesBox {
+      margin-bottom: 45px;
+   }
+ }

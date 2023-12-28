@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import styles from "./common.module.css"
 import Link from 'next/link'
 
-export default function TimelineStep({ LinkArray, ContentArray, whyChooseList, AboutPage }) {
+export default function TimelineStep({ LinkArray, ContentArray, whyChooseList, AboutPage, Horizontal }) {
 
     return (
-        <ul className={styles.StepRound}>
+        <ul className={`${styles.StepRound} ${Horizontal ? styles.Horizontal : null}`}>
 
 
             {LinkArray?.length > 0 && LinkArray.map((item, index) => {

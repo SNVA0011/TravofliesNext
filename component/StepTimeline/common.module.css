@@ -116,7 +116,40 @@
     font-size: 14px; 
 }
 
+
+
 /* responsive */
+@media only screen and (min-width:992px) {
+    
+.StepRound.Horizontal{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+-webkit-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+}
+.StepRound.Horizontal .FlexListRow{
+width: 33.33%;
+padding-bottom: 0;
+}
+.StepRound.Horizontal .FlexListRow::before{
+display: none;
+}
+.StepRound.Horizontal .FlexGrow {
+    padding-left: 15px;
+    padding-right: 23px;
+    padding-top: 90px;
+    margin-left: -69px;
+    border-right: dashed 2px #efefef;
+    min-height: 300px;
+} 
+.StepRound.Horizontal .iconRound.AboutPage{
+margin-left: 15px;
+}
+}
 @media only screen and (min-width:1200px) {
     .iconRound.AboutPage{
         min-width: 69px;
