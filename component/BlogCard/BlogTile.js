@@ -27,10 +27,8 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
   const slideOpt = {
     initialSlide: 0,
     spaceBetween: 10,
-    navigation: length > 8 ? true : false,
-    pagination: {
-      clickable: true,
-    },
+    navigation: true,
+    pagination: true,
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,

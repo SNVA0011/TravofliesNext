@@ -10,9 +10,7 @@ import { FlightSiteid } from '../../utils/static'
 const cheapFlight = ({ flightslist }) => {
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
-
-  console.log('flightslist-', flightslist)
+  }, []) 
 
   return (
     <>

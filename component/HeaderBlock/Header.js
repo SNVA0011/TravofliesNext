@@ -12,8 +12,8 @@ export default function Header() {
 
     const router = useRouter();
     const HeaderUrl = PageStaicJson('header');
-    const ForHomePage = router?.asPath === '/' 
- 
+    const FooterUrl = PageStaicJson('footer');
+    const ForHomePage = router?.asPath === '/'
 
     // sticky header
     const [sticky, setSticky] = useState(false);
@@ -79,10 +79,19 @@ export default function Header() {
                 </Navbar>
             </header>
 
-{expanded && <div className={`d-md-none ${styles.offcanvasBackdrop} ${ForHomePage ? '' : styles.Other}`} onClick={() => window.innerWidth < 768 ? setExpanded(false) : ''}></div>}
-            
+            {expanded && <div className={`d-md-none ${styles.offcanvasBackdrop} ${ForHomePage ? '' : styles.Other}`} onClick={() => window.innerWidth < 768 ? setExpanded(false) : ''}></div>}
 
             <div className='new_header_area_empty full-w'></div>
+
+            <a href={FooterUrl.ConnectWithUs.LinksUrl[1].url} className={`${styles.PhoneNoWrp} d-flex align-items-center`}>
+                <div className={styles.PhoneNo}>
+                    <img src='/images/phone-icon.png' />
+                </div> 
+                <div className={styles.PhoneNoImg}>
+                    Fell free to Ask
+                    <b className='d-block'>{FooterUrl.ConnectWithUs.LinksUrl[1].title}</b>
+                </div>
+            </a>
         </>
     )
 }

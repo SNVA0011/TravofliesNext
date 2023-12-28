@@ -271,7 +271,9 @@ padding-right: 5px;
         margin-bottom: 18px;
         text-align: center;
     }
-
+    .desCription img {
+       width: 140px;
+    }
     .siteFooter {
         overflow: hidden;
         background-size: 130px;
@@ -305,7 +307,9 @@ padding-right: 5px;
     .Quicklink h5 {
         font-size: 16px;
     } 
-
+    .desCription img {
+        width: 130px;
+     }
 }
 
 @media only screen and (max-width:425px) {

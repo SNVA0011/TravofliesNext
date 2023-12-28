@@ -41,11 +41,11 @@ export default function blogDetails({ singleblog, allblog }) {
             blogHeading={true}
             pathBetween={[
               {
-                'title': 'Blogs',
-                'url': '/blogs'
+                'title': 'Articolo',
+                'url': '/articolo'
               }
             ]}
-            currentPage="Blog Details"
+            currentPage="Articolo Dettagli"
           />
 
 
@@ -65,7 +65,7 @@ export default function blogDetails({ singleblog, allblog }) {
                     </li>
                     <li>
                       <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
-                      Travel
+                      Viaggio
                     </li>
                   </ul>
 
@@ -83,13 +83,12 @@ export default function blogDetails({ singleblog, allblog }) {
           <SpaceMy bgYellow={true}>
             <RecentBlog
               recentitem={allblog}
-              path={`blogs`}
-              title={`Latest Posts`}
-              
-              viewcontent={`View All`}
-              readmore={`Read more`}
-              noitem={`No items found !`}
-              admintext={`Travel`}
+              path={`articolo`}
+              title={`Articoli Recenti`} 
+              viewcontent={`Mostra tutto`}
+              readmore={`Per saperne di più`}
+              noitem={`Nessun articolo trovato !`}
+              admintext={`Viaggio`}
               showitem={6}
               RecentBlog={true}
             />
@@ -113,10 +112,10 @@ export async function getStaticProps(context) {
   const { params } = context;
 
   // Single blog
-  const GetSingleBlog = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}/${params.slug}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
+  const GetSingleBlog = await getApiData(`https://laravelapi.hunterwave.com/api/it/articolo/${siteid}/${params.slug}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   // All blog
-  const GetBlogData = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
+  const GetBlogData = await getApiData(`https://laravelapi.hunterwave.com/api/it/articolo/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   return {
     props: {
@@ -130,7 +129,7 @@ export async function getStaticProps(context) {
 
 // paths -> slugs which are allowed
 export const getStaticPaths = async () => {
-  const data = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
+  const data = await getApiData(`https://laravelapi.hunterwave.com/api/it/articolo/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   // fallback -> 
   const paths = data.map((post) => ({

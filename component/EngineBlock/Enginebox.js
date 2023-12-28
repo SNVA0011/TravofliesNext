@@ -13,7 +13,7 @@ export default function Enginebox(props) {
                  The Beautiful Place in the <span>World <img src="/images/vector-yellow.png" alt="line-yellow"></img></span>
               </h1>
               <p className={styles.ExploreMore}>
-              Lorem ipsum dolor sit amet consectetur. Mattis condimentum quis vel quis eu congueLorem ipsum dolor sit amet consectetur. Mattis condimentum quis vel quis eu .
+              The sky is never the limit when you choose to fly with us to exotic locations and vibrant destinations under our exclusive itinerary. 
               </p>
             </Col>
             <Col xs={12} md={6} className="center text-md-right mt-5 mt-md-0">

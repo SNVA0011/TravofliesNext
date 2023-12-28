@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BreadHero from "../../component/Breadcrumb/BreadHero";
 import Pageerror from "../../component/PageError/Pageerror";
-import { useRouter } from "next/router"; 
+import { useRouter } from "next/router";
 import Moment from 'react-moment';
 import PageHead from "../../component/PageHead";
 import RecentBlog from "../../component/RecentBlog";
@@ -13,16 +13,16 @@ import { getApiData } from "../../utils/GetApiResp";
 
 
 export default function blogDetails({ singleblog, allblog }) {
-  const location = useRouter(); 
+  const location = useRouter();
 
   // isFallback
   if (location.isFallback) {
-    return  <div className={styles.loadPage}> 
-    <div className='text-center full-w my-auto py-5'>
-    <div className={`spinner-border ${styles.loadPageSpin}`} role="status">
+    return <div className={styles.loadPage}>
+      <div className='text-center full-w my-auto py-5'>
+        <div className={`spinner-border ${styles.loadPageSpin}`} role="status">
+        </div>
       </div>
     </div>
-  </div>
   }
 
   return (
@@ -41,11 +41,11 @@ export default function blogDetails({ singleblog, allblog }) {
             blogHeading={true}
             pathBetween={[
               {
-                'title': 'Blogs',
-                'url': '/blogs'
+                'title': 'Nouvelles',
+                'url': '/nouvelles'
               }
             ]}
-            currentPage="Blog Details"
+            currentPage="Détails de l'actualité"
           />
 
 
@@ -65,7 +65,7 @@ export default function blogDetails({ singleblog, allblog }) {
                     </li>
                     <li>
                       <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
-                      Travel
+                      Voyage
                     </li>
                   </ul>
 
@@ -83,13 +83,12 @@ export default function blogDetails({ singleblog, allblog }) {
           <SpaceMy bgYellow={true}>
             <RecentBlog
               recentitem={allblog}
-              path={`blogs`}
-              title={`Latest Posts`}
-              
+              path={`nouvelles`}
+              title={`Latest Nouvelles`} 
               viewcontent={`View All`}
               readmore={`Read more`}
               noitem={`No items found !`}
-              admintext={`Travel`}
+              admintext={`Voyage`}
               showitem={6}
               RecentBlog={true}
             />
@@ -113,24 +112,24 @@ export async function getStaticProps(context) {
   const { params } = context;
 
   // Single blog
-  const GetSingleBlog = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}/${params.slug}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
+  const GetSingleBlog = await getApiData(`https://laravelapi.hunterwave.com/api/fr/article/${siteid}/${params.slug}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   // All blog
-  const GetBlogData = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
+  const GetBlogData = await getApiData(`https://laravelapi.hunterwave.com/api/fr/article/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   return {
     props: {
       singleblog: GetSingleBlog,
-      allblog: GetBlogData, 
-    }, 
-    revalidate: 10 
+      allblog: GetBlogData,
+    },
+    revalidate: 10
   };
 }
 
 
 // paths -> slugs which are allowed
 export const getStaticPaths = async () => {
-  const data = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
+  const data = await getApiData(`https://laravelapi.hunterwave.com/api/fr/article/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
 
   // fallback -> 
   const paths = data.map((post) => ({

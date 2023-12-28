@@ -1,6 +1,6 @@
 .ButtonGreen{
     color: #ffffff; 
-font-size: 17px;
+font-size: 16px;
 font-style: normal;
 font-weight: 500; 
 padding: 10px 17px;
@@ -17,12 +17,6 @@ min-width: 150px;
     color: #ffffff; 
 }
 
-
-@media only screen and (max-width:767px) {
-    .ButtonGreen{
-        font-size: 16px;
-    }
-}
 @media only screen and (max-width:575px) {
     .ButtonGreen{
         font-size: 15px;

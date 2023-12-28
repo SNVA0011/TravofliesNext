@@ -1,5 +1,5 @@
 .postDateMore {
-    color: #838282;
+    color: #606060;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -93,7 +93,7 @@
 .contentBasic ol{list-style-type: decimal;}
 .contentBasic ul{list-style-type: square;}
 .contentBasic ul li, .contentBasic ol li{ font-size: 15px; margin-left: 23px; margin-bottom: 6px; }
-.contentBasic, .contentBasic p{ line-height: 1.6}
+.contentBasic, .contentBasic p{ line-height: 1.75}
 .contentBasic h1{font-size: 160%; font-weight: 700; margin-bottom: 8px; margin-top: 45px;color: #000000;}
 .contentBasic h2{font-size: 150%; font-weight: 700; margin-bottom: 8px; margin-top: 45px;color: #000000;}
 .contentBasic h3{font-size: 140%; font-weight: 700; margin-bottom: 8px; margin-top: 45px;color: #000000;}

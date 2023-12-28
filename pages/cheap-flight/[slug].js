@@ -17,9 +17,6 @@ import { getApiData } from "../../utils/GetApiResp";
 export default function blogDetails({ SingleFlight, flightslist }) {
   const location = useRouter();
 
-  console.log('SingleFlight-',SingleFlight)
-  console.log('flightslist-',flightslist)
-
   // isFallback
   if (location.isFallback) {
     return <div className={styles.loadPage}>
@@ -38,7 +35,7 @@ export default function blogDetails({ SingleFlight, flightslist }) {
           <PageHead
             title={ReactHtmlParser(SingleFlight[0].title)}
             description={ReactHtmlParser(SingleFlight[0].description)}
-            keywords={ReactHtmlParser(SingleFlight[0].keywords)}
+            keywords={ReactHtmlParser(SingleFlight[0].keyword)}
           />
 
           <BreadHero
@@ -66,11 +63,11 @@ export default function blogDetails({ SingleFlight, flightslist }) {
                     </li>
                     <li>
                       <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
-                      <Moment date={SingleFlight[0].posttime} format="DD MMM-YYYY" />
+                      <Moment date={SingleFlight[0].postTime} format="DD MMM-YYYY" />
                     </li>
                     <li>
                       <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
-                      Cheap Flight
+                      {SingleFlight[0].origingAirportCode}
                     </li>
                   </ul>
 
@@ -94,6 +91,7 @@ export default function blogDetails({ SingleFlight, flightslist }) {
                 <ChpFlgCard
                   path={`cheap-flight`}
                   flightslist={flightslist}
+                  showitem={6}
                 />
               </div>
 

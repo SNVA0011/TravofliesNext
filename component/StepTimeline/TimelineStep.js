@@ -12,7 +12,7 @@ export default function TimelineStep({ LinkArray, ContentArray, whyChooseList, A
                 return (
                     <li className={styles.FlexListRow} key={index}>
                         <Link href={item.url}>
-                            <a className={`d-flex`} target='_blank'>
+                            <a className={`d-flex`}>
                                 <div className={`${styles.iconRound} d-inline-flex flex-column align-items-center justify-content-center`}>
                                     {item.iconImg ? <img src={item.icon} alt={item.heading} /> : item.icon}
                                 </div>

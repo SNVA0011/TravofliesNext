@@ -7,9 +7,13 @@ import { Col, Row } from 'react-bootstrap'
 import styles from "./contact.module.css"
 import TimelineStep from '../../component/StepTimeline/TimelineStep'
 import ContactUsForm from '../../component/ContactUs/ContactUsForm'
+import { PageStaicJson } from '../../static/StaticJson'
 
 
 const Contact = () => {
+
+    const FooterUrl = PageStaicJson('footer');
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -44,11 +48,11 @@ const Contact = () => {
                                     'content': 'support@travoflies.com',
                                 },
                                 {
-                                    'url': `tel:+1-802-341-3461`,
+                                    'url': FooterUrl.ConnectWithUs.LinksUrl[1].url,
                                     'icon': '/images/phone-icn.png',
                                     'iconImg': true,
                                     'heading': 'Phone Number',
-                                    'content': '+1-802-341-3461',
+                                    'content': FooterUrl.ConnectWithUs.LinksUrl[1].title,
                                 },
                             ]}  />
                         </div>

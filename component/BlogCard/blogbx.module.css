@@ -94,7 +94,7 @@ min-height: 300px;
 }
 
 .bxSubs {
-    color: #838282;
+    color: #606060;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -111,7 +111,7 @@ min-height: 300px;
 .bxSubs::after {
     content: "";
     position: absolute;
-    color: #838282;
+    color: #606060;
     right: 0;
     width: 100%;
     text-align: right;
@@ -146,7 +146,7 @@ min-height: 300px;
 
 
 .postDateMore {
-    color: #838282;
+    color: #606060;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -239,9 +239,7 @@ min-height: 300px;
 .mbspace{
     margin-bottom: 40px;
     min-height: 270px;
-}
-
-
+} 
 
 /* responsive */
 @media only screen and (min-width:992px) {

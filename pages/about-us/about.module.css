@@ -1,10 +1,10 @@
 .DescripInf {
-    color: #838282;
+    color: #696969;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
-    margin-bottom: 27px;
+    margin-bottom: 18px;
 }
 
 .mtDescripInf {
@@ -44,6 +44,58 @@
     z-index: 1;
 }
 
+.DescripInf.DescripInfImg {
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: 28px;
+    margin-bottom: 0;
+}
+
+.DescripInfImgMb {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.DescripInfImg img {
+    width: 22px;
+    min-width: 22px;
+    margin-right: 12px;
+    position: relative;
+    top: 1px;
+}
+
+.DescripInfImg .ColRoundBx {
+    border-radius: 15px;
+    padding: 15px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.ServiceOff {
+    color: #18978f;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    border-left: solid 3px #18978f;
+    padding-left: 18px;
+    font-size: 22px;
+    border-radius: 2px;
+    position: relative;
+}
+.ServiceOff::before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #18978f;
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    margin-top: -6px;
+}
+
 @media only screen and (max-width:1299px) and (min-width:1200px) {
     .OurStory {
         margin-left: 20px;
@@ -69,6 +121,10 @@
     .OurStoryCenter {
         text-align: center;
     }
+
+    .ServiceOff {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width:767px) {
@@ -92,6 +148,16 @@
         width: 100%;
         max-width: 70%;
     }
+
+    .DescripInfImg img {
+        width: 22px;
+        min-width: 22px;
+        margin-right: 10px;
+    }
+
+    .ServiceOff {
+        font-size: 18px;
+    }
 }
 
 
@@ -99,5 +165,5 @@
     .OurStory {
         width: 100%;
         max-width: 80%;
-    }
+    } 
 }

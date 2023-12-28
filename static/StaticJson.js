@@ -29,7 +29,7 @@ export const PageStaicJson = (page) => {
                 'BtnText': 'Subscribe',
             },
             'HomeEng': '/',
-            'Info': 'While planning a trip to your favorite destination, multiple things must be considered so that you can easily travel with them by making the related booking. And at Travvoflies',
+            'Info': 'Flying across various destinations worldwide creates a sense of joy and happiness for travoholics, which enables them to create everlasting memories. Let us at Travoflies, whisk you away toward attaining unforgettable travel dreams that are yet to be fulfilled.',
             'QuickLinks' : {
                 'heading':'Quick Links',
                 'LinksUrl' : [

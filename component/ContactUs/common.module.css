@@ -46,19 +46,19 @@
 }
 
 .ContactUsForm .FormControl::-webkit-input-placeholder {
-    color: #838282;
+    color: #606060;
 }
 
 .ContactUsForm .FormControl::-moz-placeholder {
-    color: #838282;
+    color: #606060;
 }
 
 .ContactUsForm .FormControl:-ms-input-placeholder {
-    color: #838282;
+    color: #606060;
 }
 
 .ContactUsForm .FormControl:-moz-placeholder {
-    color: #838282;
+    color: #606060;
 }
 
 .ContactUsForm textarea.FormControl {

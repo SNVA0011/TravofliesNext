@@ -1,10 +1,25 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { siteurl } from "../utils/static"; 
+import { siteurl } from "../utils/static";
 
 class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    const { pathname } = ctx;
+    
+    const lang = pathname.startsWith("/artikel") ? "nl"
+    : pathname.startsWith("/nouvelles") ? "fr"
+      : pathname.startsWith("/articulo") ? "es"
+      : pathname.startsWith("/bloggen") ? "de"
+      : pathname.startsWith("/articolo") ? "it" 
+        : pathname.startsWith("/artigo") ? "pt" : "en-US";
+
+    return { ...initialProps, lang };
+  }
+
   render() {
+    const { lang } = this.props;
     return (
-      <Html lang="en-US">
+      <Html lang={lang}>
         <Head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <link rel="icon" href={`/favicon.ico`} type="image/ico" />
@@ -24,7 +39,7 @@ class MyDocument extends Document {
       gtag("js", new Date());
 
       gtag("config", "G-93EV30HPZR");`
-          }}></script> 
+          }}></script>
 
         </Head>
         <body>
