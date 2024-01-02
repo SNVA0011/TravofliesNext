@@ -12,7 +12,7 @@ a.chpButton {
 }
 
 
-a.chpButton img {
+.colUpdateChp {
     width: 30px;
     min-width: 30px;
     border-radius: 50px;
@@ -126,7 +126,7 @@ a.chpButton:hover img {
         padding-left: 12px;
     }
 
-    a.chpButton img {
+    .colUpdateChp {
         width: 26px;
         min-width: 26px;
     }

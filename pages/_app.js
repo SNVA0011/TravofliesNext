@@ -8,12 +8,7 @@ import { useRouter } from 'next/router';
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
 
-  const lang = pathname.startsWith("/artikel") ? "nl"
-    : pathname.startsWith("/nouvelles") ? "fr"
-      : pathname.startsWith("/articulo") ? "es"
-      : pathname.startsWith("/bloggen") ? "de"
-      : pathname.startsWith("/articolo") ? "it"
-        : pathname.startsWith("/artigo") ? "pt" : "en-US";
+  const lang = pathname.startsWith("/artikel") ? "nl" : pathname.startsWith("/nouvelles") ? "fr" : pathname.startsWith("/articulo") ? "es" : pathname.startsWith("/bloggen") ? "de" : pathname.startsWith("/articolo") ? "it" : pathname.startsWith("/artigo") ? "pt" : "en-US";
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -21,7 +16,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no" /></Head>
+      <Head> <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /></Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>

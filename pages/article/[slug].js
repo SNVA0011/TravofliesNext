@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BreadHero from "../../component/Breadcrumb/BreadHero";
 import Pageerror from "../../component/PageError/Pageerror";
-import { useRouter } from "next/router"; 
+import { useRouter } from "next/router";
 import Moment from 'react-moment';
 import PageHead from "../../component/PageHead";
 import RecentBlog from "../../component/RecentBlog";
@@ -10,19 +10,20 @@ import ReactHtmlParser from 'react-html-parser';
 import SpaceMy from "../../component/SpaceHoriztal/SpaceMy";
 import styles from "./slugdt.module.css"
 import { getApiData } from "../../utils/GetApiResp";
+import Image from "next/image";
 
 
 export default function blogDetails({ singleblog, allblog }) {
-  const location = useRouter(); 
+  const location = useRouter();
 
   // isFallback
   if (location.isFallback) {
-    return  <div className={styles.loadPage}> 
-    <div className='text-center full-w my-auto py-5'>
-    <div className={`spinner-border ${styles.loadPageSpin}`} role="status">
+    return <div className={styles.loadPage}>
+      <div className='text-center full-w my-auto py-5'>
+        <div className={`spinner-border ${styles.loadPageSpin}`} role="status">
+        </div>
       </div>
     </div>
-  </div>
   }
 
   return (
@@ -60,11 +61,17 @@ export default function blogDetails({ singleblog, allblog }) {
                       by Admin
                     </li>
                     <li>
-                      <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
+                      <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg}
+                        width={18}
+                        height={19}
+                      />
                       <Moment date={singleblog[0].created_at} format="DD MMM-YYYY" />
                     </li>
                     <li>
-                      <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
+                      <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg}
+                        width={14}
+                        height={15}
+                      />
                       Travel
                     </li>
                   </ul>
@@ -85,7 +92,7 @@ export default function blogDetails({ singleblog, allblog }) {
               recentitem={allblog}
               path={`article`}
               title={`Latest Articles`}
-              
+
               viewcontent={`View All`}
               readmore={`Read more`}
               noitem={`No items found !`}
@@ -121,9 +128,9 @@ export async function getStaticProps(context) {
   return {
     props: {
       singleblog: GetSingleBlog,
-      allblog: GetBlogData, 
-    }, 
-    revalidate: 10 
+      allblog: GetBlogData,
+    },
+    revalidate: 10
   };
 }
 

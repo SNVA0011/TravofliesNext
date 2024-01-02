@@ -6,6 +6,7 @@ import Link from "next/link"
 import { useRouter } from 'next/router';
 import styles from './header.module.css'
 import { PageStaicJson } from '../../static/StaticJson';
+import Image from 'next/image';
 
 
 export default function Header() {
@@ -42,8 +43,20 @@ export default function Header() {
                         <Navbar.Brand>
                             <Link href={`/`}>
                                 <a onClick={() => window.innerWidth < 768 ? setExpanded(false) : ''} className={'navbar-brand ' + (location.pathname === "/" ? 'active ' : '') + (styles.NavbarImage)}>
-                                    <img src='/images/travoflies-logo.png' alt='travoflies' className={styles.NavbarPicOne}></img>
-                                    <img src='/images/travoflies-logo-white.png' alt='travoflies' className={styles.NavbarPicTwo}></img>
+
+                                    <span className={styles.NavbarPicOne}>
+                                        <Image src='/images/travoflies-logo.png' alt='travoflies'
+                                            width={216}
+                                            height={42}
+                                        ></Image>
+                                    </span>
+
+                                    <span className={styles.NavbarPicTwo}>
+                                        <Image src='/images/travoflies-logo-white.png' alt='travoflies'
+                                            width={216}
+                                            height={42}
+                                        ></Image>
+                                    </span>
                                 </a>
                             </Link>
                         </Navbar.Brand>
@@ -85,8 +98,9 @@ export default function Header() {
 
             <a href={FooterUrl.ConnectWithUs.LinksUrl[1].url} className={`${styles.PhoneNoWrp} d-flex align-items-center`}>
                 <div className={styles.PhoneNo}>
-                    <img src='/images/phone-icon.png' />
-                </div> 
+                    <Image src='/images/phone-icon.png' alt='phone-icon'  width={42}
+                                        height={42}/>
+                </div>
                 <div className={styles.PhoneNoImg}>
                     Fell free to Ask
                     <b className='d-block'>{FooterUrl.ConnectWithUs.LinksUrl[1].title}</b>

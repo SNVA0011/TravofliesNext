@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from "./common.module.css"
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function TimelineStep({ LinkArray, ContentArray, whyChooseList, AboutPage, Horizontal }) {
 
@@ -14,7 +15,14 @@ export default function TimelineStep({ LinkArray, ContentArray, whyChooseList, A
                         <Link href={item.url}>
                             <a className={`d-flex`}>
                                 <div className={`${styles.iconRound} d-inline-flex flex-column align-items-center justify-content-center`}>
-                                    {item.iconImg ? <img src={item.icon} alt={item.heading} /> : item.icon}
+                                    {item.iconImg ?
+                                        <span className={`d-inline-flex ${styles.iconRoundWidth}`}>
+                                            <Image src={item.icon} alt={item.heading}
+                                                width={38}
+                                                height={38}
+                                            />
+                                        </span>
+                                        : item.icon}
                                 </div>
                                 <div className={`${styles.FlexGrow} flex-grow-1`}>
                                     <h5 className={styles.StepTitle}>{item.heading}</h5>
@@ -33,7 +41,14 @@ export default function TimelineStep({ LinkArray, ContentArray, whyChooseList, A
                     <li className={styles.FlexListRow} key={index}>
                         <div className={`d-flex`}>
                             <div className={`${styles.iconRound} ${whyChooseList ? styles.whyChooseList : ''} ${AboutPage ? styles.AboutPage : ''} d-inline-flex flex-column align-items-center justify-content-center`}>
-                                {item.iconImg ? <img src={item.icon} alt={item.heading} /> : item.icon}
+                                {item.iconImg ?
+                                    <span className={`d-inline-flex ${styles.iconRoundWidth}`}>
+                                        <Image src={item.icon} alt={item.heading}
+                                            width={38}
+                                            height={38}
+                                        />
+                                    </span>
+                                    : item.icon}
                             </div>
                             <div className={`${styles.FlexGrow} flex-grow-1`}>
                                 <h5 className={styles.StepTitle}>{item.heading}</h5>
@@ -45,7 +60,7 @@ export default function TimelineStep({ LinkArray, ContentArray, whyChooseList, A
                                     (<div className={styles.StepTextTwo}>
                                         {item.content}
                                     </div>)
-                                } 
+                                }
                             </div>
                         </div>
                     </li>

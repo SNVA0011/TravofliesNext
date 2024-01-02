@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 
 export default function BlogTile({ allbloglist, showitem = allbloglist?.length, path, readmore, noitem, admintext, Thumbnail = false, RecentBlog = false }) {
@@ -53,8 +54,8 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
     },
     modules: [Navigation, Autoplay, Pagination],
   };
- 
- 
+
+
 
   return (
     <>
@@ -70,7 +71,10 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
                       <a className={`d-flex flex-column ${styles.mbspace} ${styles.ViewMoreBlog} ${Thumbnail ? styles.borderTp : styles.borderNone}`}>
 
                         {Thumbnail && <div className={styles.imgCoverbg}>
-                          <img src={ImgPath} alt={ReactHtmlParser(items.title)} />
+                          <Image fill={true}
+                            layout={'fill'}
+                            objectFit={'cover'}
+                            src={ImgPath} alt={ReactHtmlParser(items.title)} />
                         </div>}
 
                         <div className={`flex-grow-1 ${styles.abReadMore}`}>
@@ -88,11 +92,17 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
 
                         <Row className={styles.postDateMore}>
                           <Col xs={7}>
-                            <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
+                            <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg}
+                              width={18}
+                              height={19}
+                            />
                             <Moment date={items.created_at} format="DD MMM-YYYY" />
                           </Col>
                           <Col xs={5} className="text-right">
-                            <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
+                            <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg}
+                              width={14}
+                              height={15}
+                            />
                             {admintext}
                           </Col>
                         </Row>
@@ -118,7 +128,10 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
                       <a className={`d-flex flex-column ${styles.ViewMoreBlog} ${Thumbnail ? styles.borderTp : ''}`}>
 
                         {Thumbnail && <div className={styles.imgCoverbg}>
-                          <img src="/images/blogthumbnail.png" alt={ReactHtmlParser(items.title)} />
+                          <Image fill={true}
+                            layout={'fill'}
+                            objectFit={'cover'}
+                            src="/images/blogthumbnail.png" alt={ReactHtmlParser(items.title)} />
                         </div>}
 
                         <div className={`flex-grow-1 ${styles.abReadMore}`}>
@@ -136,11 +149,17 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
 
                         <Row className={styles.postDateMore}>
                           <Col xs={7}>
-                            <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
+                            <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg}
+                              width={18}
+                              height={19}
+                            />
                             <Moment date={items.created_at} format="DD MMM-YYYY" />
                           </Col>
                           <Col xs={5} className="text-right">
-                            <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
+                            <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg}
+                              width={14}
+                              height={15}
+                            />
                             {admintext}
                           </Col>
                         </Row>

@@ -8,6 +8,7 @@ import { Col, Row } from 'react-bootstrap'
 import TimelineStep from '../../component/StepTimeline/TimelineStep'
 import styles from "./about.module.css"
 import OurServiceBx from '../../component/OurService/OurServiceBx'
+import Image from 'next/image'
 
 
 const Aboutus = () => {
@@ -34,7 +35,11 @@ const Aboutus = () => {
                 <Row className='align-items-xl-center'>
                     <Col xs={12} lg={5} className={`${styles.OurStoryCenter} ${styles.OurStoryHidden}`}>
                         <div className={styles.OurStory}>
-                            <img src='/images/ourstory.png' alt='About us' />
+                            <Image src='/images/ourstory.png' alt='About us' 
+                                width={474}
+                                height={495} 
+                                
+                            />
                         </div>
                     </Col>
                     <Col xs={12} lg={7} className={`mt-5 mt-lg-0 pl-lg-4 pl-xl-5 ${styles.OurStoryCenter}`}>
@@ -148,7 +153,10 @@ const Aboutus = () => {
                 <div className='mt-58'>
                     <Row className='align-items-lg-center flex-row-reverse'>
                         <Col xs={12} sm={5} md={4} xl={6} className={`text-center`}>
-                            <img src='/images/routed-about.png' alt='Why Choose Us' />
+                            <Image src='/images/routed-about.png' alt='Why Choose Us' 
+                                width={373}
+                                height={358}
+                            />
                         </Col>
                         <Col xs={12} sm={7} md={8} xl={6} className={`mt-4 mt-sm-0 ${styles.OurStoryCenter}`}>
                             <div className='text-left'>
@@ -181,7 +189,10 @@ const Aboutus = () => {
 
                     <Row className='align-items-lg-center mt-58 pt-4 pt-md-0'>
                         <Col xs={12} sm={5} md={4} xl={6} className={`text-center`}>
-                            <img src='/images/location-about.png' alt='Why Choose Us' />
+                            <Image src='/images/location-about.png' alt='Why Choose Us' 
+                               width={373}
+                                height={358}
+                            />
                         </Col>
 
                         <Col xs={12} sm={7} md={8} xl={6} className={`mt-4 mt-sm-0 ${styles.OurStoryCenter}`}>

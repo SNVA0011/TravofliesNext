@@ -12,7 +12,8 @@ body {
   word-break: break-word;
   font-display: swap; 
   background: #fbfbfb; 
-  letter-spacing: 0.4px;
+  letter-spacing: 0.4px; 
+  touch-action: pan-y, pan-x; 
 }
 
 body { scrollbar-face-color: #c1c7d0; scrollbar-track-color:  #ffffff }

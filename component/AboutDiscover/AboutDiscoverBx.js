@@ -5,6 +5,7 @@ import { Col, Row } from 'react-bootstrap'
 import PageHeading from '../HeadingStyle/PageHeading'
 import LinkButtonSite from '../ButtonSite/LinkButtonSite'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 const AnimatedNumbers = dynamic(
     () => import('react-animated-numbers'),
     { ssr: false }
@@ -13,11 +14,12 @@ const AnimatedNumbers = dynamic(
 const AboutDiscoverBx = ({ ThumbnailPath, Heading, ContentOne, ContentTwo, Discover, HappyCustomer }) => {
     return (
         <SpaceMy bgWhite={true}>
-                    <div className={styles.AboutDiscover}>
+            <div className={styles.AboutDiscover}>
                 <Row className='align-items-xl-center'>
                     <Col xs={12} lg={5} xl={6} className={`${styles.OurPlanCenter} ${styles.OurPlanHidden}`}>
                         <div className={styles.OurPlan}>
-                            <img src={ThumbnailPath} alt={Heading} />
+                            <Image src={ThumbnailPath} alt={Heading} width={503}
+                                height={477} />
                         </div>
                     </Col>
                     <Col xs={12} lg={7} xl={6} className={`mt-5 mt-lg-0 ${styles.OurPlanCenter}`}>

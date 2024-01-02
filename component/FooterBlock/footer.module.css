@@ -1,5 +1,5 @@
 .siteFooter {
-    background-image: url('/images/footer-wv-l.png'), url('/images/footer-wv-r.png');
+    background-image: url('/images/footer-wv-l.webp'), url('/images/footer-wv-r.webp');
     background-position: top left, bottom right;
     background-repeat: no-repeat;
     background-color: #DCF4F5;
@@ -76,7 +76,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    background: #18978F;
+    background: #0a5c56;
     border: none;
     height: 48px;
     width: 116px;
@@ -87,7 +87,7 @@
 .SubsNewsletter .SubsNewsAppend .Btn:active,
 .SubsNewsletter .SubsNewsAppend .Btn:focus,
 .SubsNewsletter .SubsNewsAppend .Btn:hover {
-    background: #0C5853;
+    background: #18978f;
     box-shadow: none;
 }
 
@@ -97,9 +97,10 @@
     padding: 40px;
 }
 
-.desCription img {
+.desCriptionLogo {
     width: 165px;
     margin-bottom: 27px;
+    display: inline-block;
 }
 
 .desCription p {
@@ -140,13 +141,13 @@ pointer-events: none;
     margin-bottom: 0;
 }
 
-.Quicklink ul img {
+.QuicklinkImg {
     width: 18px;
     min-width: 18px;
     margin-right: 8px;
 }
 
-.Quicklink h5 {
+.Quicklink p {
     color: #363535;
     font-size: 20px;
     font-style: normal;
@@ -154,7 +155,7 @@ pointer-events: none;
     line-height: normal;
 }
 
-.Quicklink h5:after {
+.Quicklink p:after {
     content: '';
     height: 2px;
     background: #feb139;
@@ -214,11 +215,11 @@ pointer-events: none;
 }
 
 @media only screen and (max-width:1199px) {
-    .desCription img {
+    .desCriptionLogo {
         margin-bottom: 20px;
     }
 
-    .Quicklink h5:after {
+    .Quicklink p:after {
         width: 52px;
         margin-bottom: 16px;
     }
@@ -227,7 +228,7 @@ pointer-events: none;
         font-size: 22px;
     }
 
-    .Quicklink h5 {
+    .Quicklink p {
         font-size: 18px;
     }
 }
@@ -271,7 +272,7 @@ padding-right: 5px;
         margin-bottom: 18px;
         text-align: center;
     }
-    .desCription img {
+    .desCriptionLogo {
        width: 140px;
     }
     .siteFooter {
@@ -279,7 +280,7 @@ padding-right: 5px;
         background-size: 130px;
     }
 
-    .Quicklink h5:after {
+    .Quicklink p:after {
         margin-bottom: 16px;
         width: 45px;
     }
@@ -304,10 +305,10 @@ padding-right: 5px;
     .ColFooter {
         margin-bottom: 35px;
     } 
-    .Quicklink h5 {
+    .Quicklink p {
         font-size: 16px;
     } 
-    .desCription img {
+    .desCriptionLogo {
         width: 130px;
      }
 }

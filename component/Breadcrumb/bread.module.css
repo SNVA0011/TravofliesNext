@@ -1,16 +1,16 @@
-.breadcrumbSite {
-    background-image: url('/images/beach-background.png');
-    background-color: #000000;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.breadcrumbSite { 
+    background-color: #000000; 
     min-height: 437px;
     text-align: center;
     padding: 30px 0;
     font-style: normal;
     line-height: normal;
+    position: relative;
 }
-
+.breadcrumbSite .CvContainer{
+position: relative;
+z-index: 1;
+}
 .breadcrumbSite.airplane {
     background-image: url('/images/flight-window.png');
     background-color: #000000;
@@ -39,8 +39,9 @@
     font-weight: 400;
 }
 
-.breadcrumbSite ul img {
+.mxSpaceIcon {
     width: 8px;
+    display: inline-block;
 }
 
 .breadcrumbSite ul li {
@@ -92,7 +93,7 @@
         margin: 0 12px;
     }
 
-    .breadcrumbSite ul img {
+    .mxSpaceIcon {
         width: 6px;
     }
 }

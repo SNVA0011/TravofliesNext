@@ -74,7 +74,7 @@
     background-color: #fff9f2;
 }
 
-.iconRound img {
+.iconRoundWidth {
     width: 38px;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
@@ -88,7 +88,7 @@
     box-shadow: none;
 }
 
-.FlexListRow:hover .iconRound img {
+.FlexListRow:hover .iconRoundWidth {
     box-shadow: 0 0 0 1px rgb(255 255 255 / 18%);
     -o-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
@@ -115,8 +115,7 @@
     color: #606060;
     font-size: 14px; 
 }
-
-
+ 
 
 /* responsive */
 @media only screen and (min-width:992px) {
@@ -179,7 +178,7 @@ margin-left: 15px;
     .StepTitle {
         font-size: 17px;
     }
-    .iconRound img {
+    .iconRoundWidth {
         width: 34px; 
     }
     
@@ -199,7 +198,7 @@ margin-left: 15px;
         height: 55px;
         font-size: 24px;
     } 
-    .iconRound img {
+    .iconRoundWidth {
         width: 30px; 
     }
     

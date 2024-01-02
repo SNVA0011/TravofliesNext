@@ -1,5 +1,5 @@
 .EngineboxArea {
-   background: url('/images/wave-background.png') #e6fcfd;
+   background: #e6fcfd;
    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.14);
    padding-top: 129px;
    padding-bottom: 44px;
@@ -19,16 +19,21 @@
    display: inline-block;
    font-family: "Lemonada", sans-serif;
 }
-
-.EngineboxArea h1 span img {
+.EngineboxArea h1 span.ExploreAmzImg{
+   position: absolute;
+}
+.ExploreAmzImg {
    position: absolute;
    margin-left: 42px;
    top: 100%;
    max-width: none;
    left: 0;
    margin-top: 10px;
+   height: 12px;
 }
-
+.ExploreAmzImg span{
+   position: static !important;
+}
 
 .AirplaneRight {
    position: absolute;
@@ -71,9 +76,10 @@
       font-size: 45px;
    }
 
-   .EngineboxArea h1 span img {
+   .ExploreAmzImg {
       width: 150px;
       margin-left: 30px;
+      height: 10px;
    }
 }
 
@@ -83,7 +89,7 @@
       line-height: 1.4;
    }
 
-   .EngineboxArea h1 span img {
+   .ExploreAmzImg {
       width: 130px;
       margin-left: 25px;
    } 
@@ -108,8 +114,9 @@
       text-align: center;
    }
 
-   .EngineboxArea h1 span img {
+   .ExploreAmzImg {
       width: 100px;
+      height: 8px;
       margin-left: 20px;
    }
    .EngineboxArea h1 {

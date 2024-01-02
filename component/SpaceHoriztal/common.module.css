@@ -5,7 +5,7 @@
 
 .bgYellow {
     background-color: #F9F4F0;
-    background-image: url('/images/bg-yellowwave.png');
+    background-image: url('/images/bg-yellowwave.webp');
     background-repeat: no-repeat;
     background-position: left top 9px;
 }
@@ -14,7 +14,7 @@
 }
 .bgWhiteChoose {
     background-color: #ffffff;
-    background-image: url('/images/whychoose-leftwv.png'), url('/images/whychoose-rightwv.png');
+    background-image: url('/images/whychoose-leftwv.webp'), url('/images/whychoose-rightwv.webp');
     background-repeat: no-repeat;
     background-position: left top 62px, bottom 62px right;
     position: relative;

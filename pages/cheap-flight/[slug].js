@@ -12,6 +12,7 @@ import ChpFlgCard from "../../component/ChpFlight/ChpFlgCard";
 import LinkButtonSite from "../../component/ButtonSite/LinkButtonSite";
 import PageHeading from "../../component/HeadingStyle/PageHeading";
 import { getApiData } from "../../utils/GetApiResp";
+import Image from "next/image";
 
 
 export default function blogDetails({ SingleFlight, flightslist }) {
@@ -62,11 +63,17 @@ export default function blogDetails({ SingleFlight, flightslist }) {
                       by Admin
                     </li>
                     <li>
-                      <img src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} />
+                      <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} 
+                               width={18}
+                        height={19}
+                      />
                       <Moment date={SingleFlight[0].postTime} format="DD MMM-YYYY" />
                     </li>
                     <li>
-                      <img src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} />
+                      <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} 
+                              width={14}
+                        height={15}
+                      />
                       {SingleFlight[0].origingAirportCode}
                     </li>
                   </ul>

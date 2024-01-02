@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./engine.module.css"
 import { Col, Container, Row } from "react-bootstrap"; 
+import Image from "next/image";
 
 export default function Enginebox(props) {
   return (
@@ -10,14 +11,18 @@ export default function Enginebox(props) {
             <Col xs={12} md={6}> 
             <p className={styles.ExploreAmz}>Amazing Places</p>
               <h1>
-                 The Beautiful Place in the <span>World <img src="/images/vector-yellow.png" alt="line-yellow"></img></span>
+                 The Beautiful Place in the <span>World 
+                 <span className={styles.ExploreAmzImg}><Image src="/images/vector-yellow.png" alt="line-yellow" width={168} height={12}></Image></span>
+                 </span>
               </h1>
               <p className={styles.ExploreMore}>
               The sky is never the limit when you choose to fly with us to exotic locations and vibrant destinations under our exclusive itinerary. 
               </p>
             </Col>
             <Col xs={12} md={6} className="center text-md-right mt-5 mt-md-0">
-              <img src="/images/airplane-engine.png" alt="airplane-background" className={styles.ExplorPlx} />
+              <Image src="/images/airplane-engine.png" alt="airplane-background" className={styles.ExplorPlx} 
+                width={482}
+                        height={514} />
             </Col>
           </Row>
         </Container>

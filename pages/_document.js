@@ -5,13 +5,8 @@ class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
     const { pathname } = ctx;
-    
-    const lang = pathname.startsWith("/artikel") ? "nl"
-    : pathname.startsWith("/nouvelles") ? "fr"
-      : pathname.startsWith("/articulo") ? "es"
-      : pathname.startsWith("/bloggen") ? "de"
-      : pathname.startsWith("/articolo") ? "it" 
-        : pathname.startsWith("/artigo") ? "pt" : "en-US";
+
+    const lang = pathname.startsWith("/artikel") ? "nl" : pathname.startsWith("/nouvelles") ? "fr" : pathname.startsWith("/articulo") ? "es" : pathname.startsWith("/bloggen") ? "de" : pathname.startsWith("/articolo") ? "it" : pathname.startsWith("/artigo") ? "pt" : "en-US";
 
     return { ...initialProps, lang };
   }
@@ -23,6 +18,8 @@ class MyDocument extends Document {
         <Head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <link rel="icon" href={`/favicon.ico`} type="image/ico" />
+
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Lemonada:wght@300;400&display=swap" rel="stylesheet" />
