@@ -63,17 +63,21 @@ export default function blogDetails({ SingleFlight, flightslist }) {
                       by Admin
                     </li>
                     <li>
+                      <span className={styles.postDateImg}>
                       <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} 
                                width={18}
                         height={19}
                       />
+                       </span>
                       <Moment date={SingleFlight[0].postTime} format="DD MMM-YYYY" />
                     </li>
                     <li>
+                      <span className={styles.postTagImg}>
                       <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} 
                               width={14}
                         height={15}
                       />
+                         </span>
                       {SingleFlight[0].origingAirportCode}
                     </li>
                   </ul>

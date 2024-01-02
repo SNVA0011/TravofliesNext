@@ -92,17 +92,21 @@ export default function BlogTile({ allbloglist, showitem = allbloglist?.length, 
 
                         <Row className={styles.postDateMore}>
                           <Col xs={7}>
-                            <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg}
-                              width={18}
-                              height={19}
-                            />
+                            <span className={styles.postDateImg}>
+                              <Image src="/images/calendar-linear.png" alt="calendar-linear"
+                                width={18}
+                                height={19}
+                              />
+                            </span>
                             <Moment date={items.created_at} format="DD MMM-YYYY" />
                           </Col>
                           <Col xs={5} className="text-right">
-                            <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg}
-                              width={14}
-                              height={15}
-                            />
+                            <span className={styles.postTagImg}>
+                              <Image src="/images/tag-outline.png" alt="tag-outline"
+                                width={14}
+                                height={15}
+                              />
+                            </span>
                             {admintext}
                           </Col>
                         </Row>

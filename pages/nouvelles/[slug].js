@@ -61,17 +61,21 @@ export default function blogDetails({ singleblog, allblog }) {
                       by Admin
                     </li>
                     <li>
-                      <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg}
-                        width={18}
-                        height={19}
-                      />
+                      <span className={styles.postDateImg}>
+                        <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg}
+                          width={18}
+                          height={19}
+                        />
+                      </span>
                       <Moment date={singleblog[0].created_at} format="DD MMM-YYYY" />
                     </li>
                     <li>
-                      <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg}
-                        width={14}
-                        height={15}
-                      />
+                      <span className={styles.postTagImg}>
+                        <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg}
+                          width={14}
+                          height={15}
+                        />
+                      </span>
                       Voyage
                     </li>
                   </ul>
