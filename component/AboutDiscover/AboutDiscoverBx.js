@@ -51,7 +51,7 @@ const AboutDiscoverBx = ({ ThumbnailPath, Heading, ContentOne, ContentTwo, Disco
                                         <span className='d-inline-block'>k</span></b> + {HappyCustomer.title}
                                 </Col>
                                 <Col xs={12} sm={6} className='text-sm-left mt-3 mt-sm-0'>
-                                    <LinkButtonSite path={Discover.url}>
+                                    <LinkButtonSite path={`${Discover.url}`}>
                                         {Discover.title}
                                     </LinkButtonSite>
                                 </Col>

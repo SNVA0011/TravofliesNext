@@ -7,7 +7,7 @@ import AboutDiscoverBx from '../component/AboutDiscover/AboutDiscoverBx';
 import Enginebox from '../component/EngineBlock/Enginebox';
 import { getApiData } from '../utils/GetApiResp';
 
-export default function Home({ allbloglist }) {
+export default function Home({ allbloglist}) {
  
   return (
     <>
@@ -33,7 +33,7 @@ export default function Home({ allbloglist }) {
               ContentOne="Being one of the prominent travel agencies offering the best trip packages to travelers, Travoflies makes it easier to enjoy more and worry less about the travel plans made. At every step you take, towards your destination, we help provide the additional stride required to make the trip memories to be everlasting. We ensure to specially cater to and make modifications under the demands that you have."
               ContentTwo="The main precept of Travoflies is to furnish travelers with a wide range of choices to pick from varied destinations around the world. As part of the same, we offer jaw-dropping deals and expert guidance for all travel destinations worldwide. Our team of highly skilled travel experts always finds the best deals and offers on flights without hampering your budget."
               Discover={{
-                'url': '/about-us',
+                'url': 'about-us',
                 'title': 'Discover more'
               }}
               HappyCustomer={{
@@ -74,7 +74,6 @@ export default function Home({ allbloglist }) {
 export const getStaticProps = async ({ params }) => {
   // Get All blogs
   const GetBlogData = await getApiData(`https://laravelapi.hunterwave.com/api/en/blogs/${siteid}?api_token=KcvgFODiK8wMdjR4BcP9mA5YUNMfd6bs1Miy5LGgA86fhHWRAv63rTwZpMyB`);
-
   return {
     props: {
        allbloglist: GetBlogData 

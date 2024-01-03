@@ -1,9 +1,13 @@
-export const getApiData = async (url, requestOptions = null) => {
+export const getApiData = async (url, requestOptions = {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' }
+  }) => {
     try {
-        const res = await fetch(url, requestOptions);
+        const res = await fetch(url, requestOptions); 
         const data = await res.json();
         return data;
-    } catch (error) {
+    }
+     catch (error) {
         console.log("error", error.message);
         return [];
     }
