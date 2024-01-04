@@ -7,13 +7,7 @@ import Image from 'next/image'
 export default function BreadHero({ heading, currentPage, AirplaneBg, pathBetween, blogHeading }) {
 
     return (
-        <div className={`d-flex ${styles.breadcrumbSite} ${AirplaneBg ? styles.airplane : ''}`}>
-            <Image
-                fill={true}
-                layout={'fill'}
-                objectFit={'cover'}
-                src="/images/beach-background.png" />
-
+        <div className={`d-flex ${styles.breadcrumbSite} ${AirplaneBg ? styles.airplane : ''}`}>  
             <Container className={`m-auto ${styles.CvContainer}`}>
                 {blogHeading ?
                     (<span className={styles.heading}>{heading}</span>)

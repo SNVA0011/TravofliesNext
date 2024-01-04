@@ -98,8 +98,8 @@ export default function Header() {
 
             <a href={FooterUrl.ConnectWithUs.LinksUrl[1].url} className={`${styles.PhoneNoWrp} d-flex align-items-center`}>
                 <div className={styles.PhoneNo}>
-                    <Image src='/images/phone-icon.png' alt='phone-icon'  width={42}
-                                        height={42}/>
+                    <Image src='/images/phone-icon.png' alt='phone-icon'  width={36}
+                                        height={36}/>
                 </div>
                 <div className={styles.PhoneNoImg}>
                     Fell free to Ask

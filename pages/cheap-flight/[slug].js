@@ -64,7 +64,7 @@ export default function blogDetails({ SingleFlight, flightslist }) {
                     </li>
                     <li>
                       <span className={styles.postDateImg}>
-                      <Image src="/images/calendar-linear.png" alt="calendar-linear" className={styles.postDateImg} 
+                      <Image src="/images/calendar-linear.png" alt="calendar-linear"
                                width={18}
                         height={19}
                       />
@@ -73,7 +73,7 @@ export default function blogDetails({ SingleFlight, flightslist }) {
                     </li>
                     <li>
                       <span className={styles.postTagImg}>
-                      <Image src="/images/tag-outline.png" alt="tag-outline" className={styles.postTagImg} 
+                      <Image src="/images/tag-outline.png" alt="tag-outline"
                               width={14}
                         height={15}
                       />
