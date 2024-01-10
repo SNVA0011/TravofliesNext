@@ -590,10 +590,6 @@
 }
 
 @media only screen and (max-width:575px) {
-    .NavbarImage {
-        width: 130px;
-    }
-
     .PhoneNoImg {
         font-size: 11px;
         line-height: 1.5;

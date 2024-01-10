@@ -17,7 +17,7 @@ class MyDocument extends Document {
       <Html lang={lang}>
         <Head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <link rel="icon" href={`/favicon.ico`} type="image/ico" />
+          <link rel="icon" href={`${siteurl}/favicon.ico`} type="image/ico" /> 
 
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,16 +26,18 @@ class MyDocument extends Document {
 
 
           <meta name="google-site-verification" content="YLhurp3K9tYgc15IC3aSl349Xos6_euWki4REHGQiiA" />
+          
           {/* Global site tag (gtag.js) - Google Analytics */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-93EV30HPZR" />
+          
           <script dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+              function gtag() {
+                dataLayer.push(arguments);
+              }
+              gtag("js", new Date());
 
-      gtag("config", "G-93EV30HPZR");`
+              gtag("config", "G-93EV30HPZR");`
           }}></script>
 
         </Head>

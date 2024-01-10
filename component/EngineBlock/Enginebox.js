@@ -8,12 +8,17 @@ export default function Enginebox(props) {
     <section className={styles.EngineboxArea}>
       <Container className={styles.ContainerEng}>
           <Row className="align-items-center">
-            <Col xs={12} md={6}> 
-            <p className={styles.ExploreAmz}>Amazing Places</p>
+            <Col xs={12} md={6}>  
               <h1>
-                 The Beautiful Place in the <span>World 
-                 <span className={styles.ExploreAmzImg}><Image src="/images/vector-yellow.png" alt="line-yellow" width={168} height={12}></Image></span>
-                 </span>
+              Mapping the skies with  <span>Travoflies 
+
+<span className={styles.ExploreAmzImg}><Image src="/images/vector-yellow.png" alt="line-yellow" width={168} height={12}></Image></span>
+
+</span>' boundless travel plans
+
+       
+        
+
               </h1>
               <p className={styles.ExploreMore}>
               The sky is never the limit when you choose to fly with us to exotic locations and vibrant destinations under our exclusive itinerary. 
